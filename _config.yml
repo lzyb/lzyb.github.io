@@ -100,7 +100,7 @@ theme: hexo-theme-yilia
 deploy:
   type: git
   repo: https://github.com/lzyb/lzyb.github.io.git
-
+  brance: master  
 
 jsonContent:
   meta: false
