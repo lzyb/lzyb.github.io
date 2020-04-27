@@ -71,7 +71,7 @@ favicon: /favicon.png
 avatar: http://b340.photo.store.qq.com/psb?/V11ympWE3gR1vX/u6u8ugm8iitPC.NRvP6Z0oI*Jc9JqwFM8RrgGj7OIE4!/b/dFQBAAAAAAAA&bo=OASgBQAAAAAAAL8!&rf=viewer_311
 
 #是否开启分享
-share_jia: false
+share_jia: true
 
 #评论：1、多说；2、网易云跟帖；3、畅言；4、Disqus；5、Gitment
 #不需要使用某项，直接设置值为false，或注释掉
@@ -107,7 +107,7 @@ style:
 # slider的设置
 slider:
   # 是否默认展开tags板块
-  showTags: true
+  showTags: false
 
 # 智能菜单
 # 如不需要，将该对应项置为false
