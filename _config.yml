@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 昭言爸爸的博客
+title: 李导师的博客
 subtitle: ''
 description: ''
 keywords:
@@ -93,7 +93,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: xxoo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
