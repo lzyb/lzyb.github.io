@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>李导师的博客</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://lzyb.github.io/"/>
+  <updated>2020-04-29T06:09:13.738Z</updated>
+  <id>https://lzyb.github.io/</id>
+  
+  <author>
+    <name>Li Hao</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>吟诗一首</title>
+    <link href="https://lzyb.github.io/2020/04/26/2020/04/26%E9%9A%8F%E7%AC%94/"/>
+    <id>https://lzyb.github.io/2020/04/26/2020/04/26%E9%9A%8F%E7%AC%94/</id>
+    <published>2020-04-26T13:32:42.000Z</published>
+    <updated>2020-04-29T06:09:13.738Z</updated>
+    
+    <content type="html"><![CDATA[  <center> 三十而立已到中年，技术平平且不善言辞。</center>  <center> ​每逢面试十面九散，未来何期也诚惶诚恐。</center>   <a id="more"></a>   <center>数十余年人在漂泊，碌碌无为还不知不觉。</center>  <center> ​二零一九新冠肺炎，方然顿悟欲难欲要抗。</center>   <center>便是一生无功与名，愿为妻儿换一世太平。</center>   <center>摘自V2EX有感</center>]]></content>
+    
+    <summary type="html">
+    
+      &lt;center&gt; 三十而立已到中年，技术平平且不善言辞。&lt;/center&gt;
+  &lt;center&gt; ​每逢面试十面九散，未来何期也诚惶诚恐。&lt;/center&gt;
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="https://lzyb.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="随笔" scheme="https://lzyb.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 单列集合</title>
+    <link href="https://lzyb.github.io/2017/03/20/Java-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/"/>
+    <id>https://lzyb.github.io/2017/03/20/Java-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/</id>
+    <published>2017-03-20T06:34:05.000Z</published>
+    <updated>2020-04-29T09:26:04.183Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合类的特点：提供一种存储空间可变的存储模式存储的数据容量可以随时发生改变。<br>和数组的区别：数组是存储同种数据类型、长度在定义后便不可变。<br>集合分为单列集合(Collection)和双列集合（Map）</p><a id="more"></a><h3 id="Collection集合的概述"><a href="#Collection集合的概述" class="headerlink" title="Collection集合的概述"></a>Collection集合的概述</h3><p>Collection是单列集合的顶层接口，它表示一组对象，这些对象也称为Collection的元素；JDK不提供此接口的任何直接实现，它提供更具体的子接口（如Set、List）实现。</p><h3 id="Collection常用的方法"><a href="#Collection常用的方法" class="headerlink" title="Collection常用的方法"></a>Collection常用的方法</h3><p>添加元素<strong>boolean add()</strong>、移除<strong>boolean remove()</strong>、清空<strong>void clear（）</strong>、判断集合是否存在某个元素<strong>boolean contains（）</strong>、判断集合是否为空<strong>boolean sEmpty()</strong>、获取集合的长度<strong>int size()</strong>。</p><h3 id="Collection集合的遍历（迭代器）"><a href="#Collection集合的遍历（迭代器）" class="headerlink" title="Collection集合的遍历（迭代器）"></a>Collection集合的遍历（迭代器）</h3><p>迭代器的介绍：是集合的专用遍历方式，通过集合的iterator iterator()方法得到。</p><p>迭代器的方法：hasNext()方法判断迭代中是否还有元素。如果有则调用next()方法返 下一个元素。<strong>值得一提的是增强for循环本质就是一个迭代器。</strong></p><p><strong>Collection集合按照不同的特点可分为两类子集合List和Set</strong></p><h3 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h3><p>List集合的特点：<strong>有序（元素的存储顺序一致）、有索引、可重复。</strong></p><p>List集合的常用方法：void add()、remove()、set()、get()。都是基于索引进行的增删改查。</p><p>列表迭代器：List集合的特有遍历，通过listIterator（）方法得到。主要用途是可以沿着任一方向进行遍历，逆向方法hasPrevious（），Previous（）。值得注意的是列表迭代器在迭代期间修改列表，返回迭代器的当前位置，所以在进行逆向遍历前先进行正向遍历。</p><h4 id="List集合的两个实现类："><a href="#List集合的两个实现类：" class="headerlink" title="List集合的两个实现类："></a>List集合的两个实现类：</h4><p>ArrayList：<strong>底层是数组，查询快，增删慢，线程不同步，效率高。</strong></p><p>LinkedList：<strong>底层是链表，增删快，查询慢，线程不同步，效率高。</strong>特有方法first()可以获取（删除，得到）列表的一个元素，Last（）同理。</p><h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3><p>Set集合的特点：<strong>无序，无索引（所以没有普通for循环），唯一（不可重复）</strong></p><h4 id="哈希值"><a href="#哈希值" class="headerlink" title="哈希值"></a>哈希值</h4><p>哈希值的概念：是JDK根据对象的地址或者字符串或者数字算出来的int类型的数值。</p><p>如何获取哈希值：通过object类中的hashcode（）：返回对象的哈希值；</p><p>哈希值的特点：1、同一个对象调用hashCode（）方法返回的哈希值是相同的；2、不同的对象可以通过重写hashCode（）方法得到相同的哈希值。</p><h4 id="Set集合的三个实现类："><a href="#Set集合的三个实现类：" class="headerlink" title="Set集合的三个实现类："></a>Set集合的三个实现类：</h4><p>HashSet：<strong>底层是哈希表，无序，无索引（不能使用普通for）,hashcode保证唯一性</strong></p><p><img src="/img/hashset.png" alt="HashSet"></p><p>LinkedHashSet：<strong>底层是哈希表和链表，有序，无索引，唯一。</strong></p><p>TreeSet：底层是二叉树，有序（指按照一定规则排序），无索引，唯一。</p><p>自然排序：实现compareable接口，复写compareTo方法，当主要条件相等时要比较次要元素，保证唯一性的语句是compareTo方法return0</p><p>比较器排序：当元素不具备比较性，或者具备的比较性不符合需求，那么就让集合自身具备比较性，定义一个类实现Compare接口，重写compare（）方法。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;集合&quot;&gt;&lt;a href=&quot;#集合&quot; class=&quot;headerlink&quot; title=&quot;集合&quot;&gt;&lt;/a&gt;集合&lt;/h2&gt;&lt;p&gt;集合类的特点：提供一种存储空间可变的存储模式存储的数据容量可以随时发生改变。&lt;br&gt;和数组的区别：数组是存储同种数据类型、长度在定义后便不可变。&lt;br&gt;集合分为单列集合(Collection)和双列集合（Map）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://lzyb.github.io/categories/Java/"/>
+    
+    
+      <category term="单列集合" scheme="https://lzyb.github.io/tags/%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/"/>
+    
+      <category term="Collection" scheme="https://lzyb.github.io/tags/Collection/"/>
+    
+  </entry>
+  
+</feed>
