@@ -41,23 +41,52 @@
   </entry>
   
   <entry>
-    <title>Java 单列集合</title>
-    <link href="https://lzyb.github.io/2017/03/20/Java-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/"/>
-    <id>https://lzyb.github.io/2017/03/20/Java-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/</id>
-    <published>2017-03-20T06:34:05.000Z</published>
-    <updated>2020-04-29T09:26:04.183Z</updated>
+    <title>Java 双列集合</title>
+    <link href="https://lzyb.github.io/2017/03/21/Java-%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88/"/>
+    <id>https://lzyb.github.io/2017/03/21/Java-%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88/</id>
+    <published>2017-03-21T02:43:43.000Z</published>
+    <updated>2020-05-06T09:26:53.476Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合类的特点：提供一种存储空间可变的存储模式存储的数据容量可以随时发生改变。<br>和数组的区别：数组是存储同种数据类型、长度在定义后便不可变。<br>集合分为单列集合(Collection)和双列集合（Map）</p><a id="more"></a><h3 id="Collection集合的概述"><a href="#Collection集合的概述" class="headerlink" title="Collection集合的概述"></a>Collection集合的概述</h3><p>Collection是单列集合的顶层接口，它表示一组对象，这些对象也称为Collection的元素；JDK不提供此接口的任何直接实现，它提供更具体的子接口（如Set、List）实现。</p><h3 id="Collection常用的方法"><a href="#Collection常用的方法" class="headerlink" title="Collection常用的方法"></a>Collection常用的方法</h3><p>添加元素<strong>boolean add()</strong>、移除<strong>boolean remove()</strong>、清空<strong>void clear（）</strong>、判断集合是否存在某个元素<strong>boolean contains（）</strong>、判断集合是否为空<strong>boolean sEmpty()</strong>、获取集合的长度<strong>int size()</strong>。</p><h3 id="Collection集合的遍历（迭代器）"><a href="#Collection集合的遍历（迭代器）" class="headerlink" title="Collection集合的遍历（迭代器）"></a>Collection集合的遍历（迭代器）</h3><p>迭代器的介绍：是集合的专用遍历方式，通过集合的iterator iterator()方法得到。</p><p>迭代器的方法：hasNext()方法判断迭代中是否还有元素。如果有则调用next()方法返 下一个元素。<strong>值得一提的是增强for循环本质就是一个迭代器。</strong></p><p><strong>Collection集合按照不同的特点可分为两类子集合List和Set</strong></p><h3 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h3><p>List集合的特点：<strong>有序（元素的存储顺序一致）、有索引、可重复。</strong></p><p>List集合的常用方法：void add()、remove()、set()、get()。都是基于索引进行的增删改查。</p><p>列表迭代器：List集合的特有遍历，通过listIterator（）方法得到。主要用途是可以沿着任一方向进行遍历，逆向方法hasPrevious（），Previous（）。值得注意的是列表迭代器在迭代期间修改列表，返回迭代器的当前位置，所以在进行逆向遍历前先进行正向遍历。</p><h4 id="List集合的两个实现类："><a href="#List集合的两个实现类：" class="headerlink" title="List集合的两个实现类："></a>List集合的两个实现类：</h4><p>ArrayList：<strong>底层是数组，查询快，增删慢，线程不同步，效率高。</strong></p><p>LinkedList：<strong>底层是链表，增删快，查询慢，线程不同步，效率高。</strong>特有方法first()可以获取（删除，得到）列表的一个元素，Last（）同理。</p><h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3><p>Set集合的特点：<strong>无序，无索引（所以没有普通for循环），唯一（不可重复）</strong></p><h4 id="哈希值"><a href="#哈希值" class="headerlink" title="哈希值"></a>哈希值</h4><p>哈希值的概念：是JDK根据对象的地址或者字符串或者数字算出来的int类型的数值。</p><p>如何获取哈希值：通过object类中的hashcode（）：返回对象的哈希值；</p><p>哈希值的特点：1、同一个对象调用hashCode（）方法返回的哈希值是相同的；2、不同的对象可以通过重写hashCode（）方法得到相同的哈希值。</p><h4 id="Set集合的三个实现类："><a href="#Set集合的三个实现类：" class="headerlink" title="Set集合的三个实现类："></a>Set集合的三个实现类：</h4><p>HashSet：<strong>底层是哈希表，无序，无索引（不能使用普通for）,hashcode保证唯一性</strong></p><p><img src="/img/hashset.png" alt="HashSet"></p><p>LinkedHashSet：<strong>底层是哈希表和链表，有序，无索引，唯一。</strong></p><p>TreeSet：底层是二叉树，有序（指按照一定规则排序），无索引，唯一。</p><p>自然排序：实现compareable接口，复写compareTo方法，当主要条件相等时要比较次要元素，保证唯一性的语句是compareTo方法return0</p><p>比较器排序：当元素不具备比较性，或者具备的比较性不符合需求，那么就让集合自身具备比较性，定义一个类实现Compare接口，重写compare（）方法。</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Map接口概述"><a href="#Map接口概述" class="headerlink" title="Map接口概述"></a>Map接口概述</h3><p>Map是双列集合的顶层接口，Map接口下是一个键值对（key-value）的映射接口，Map集合中，不能包含重复的键，每个键只能映射一个值（元素），值可以重复，因此可以根据key快速查找value的值。</p><a id="more"></a><h3 id="Map接口常用的方法"><a href="#Map接口常用的方法" class="headerlink" title="Map接口常用的方法"></a>Map接口常用的方法</h3><p>1、void clear()  从该地图中删除所有的映射（可选操作）。<br>2、boolean containsKey(Object key) 如果此映射包含指定键的映射，则返回 true 。<br>3、boolean containsKey(Object key) 如果此映射包含指定键的映射，则返回 true 。<br>4、Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet() 返回此地图中包含的映射的Set视图。<br>5、Set<K> keySet() 返回此地图中包含的键的Set视图。<br>6、V     put(K key, V value) 将指定的值与该映射中的指定键相关联（可选操作）。<br>7、V    remove(Object key) 如果存在（从可选的操作），从该地图中删除一个键的映射。<br>8、int  size() 返回此地图中键值映射的数量。</p><h3 id="常用实现类"><a href="#常用实现类" class="headerlink" title="常用实现类"></a>常用实现类</h3><h4 id="Class-HashMap-lt-K-V-gt"><a href="#Class-HashMap-lt-K-V-gt" class="headerlink" title="Class HashMap&lt;K,V&gt;"></a>Class HashMap&lt;K,V&gt;</h4><p>基于哈希表的实现的Map接口。 此实现提供了所有可选的地图操作，并允许null的值和null键。 （ HashMap类大致相当于Hashtable ，除了它是不同步的，并允许null）。这个类不能保证地图的顺序; 特别是，它不能保证订单在一段时间内保持不变。<br>HashMap非线程安全，即任一时刻可以有多个线程同时写HashMap，可能会导致数据的不一致。如果需要满足线程安全，可以用 Collections的synchronizedMap方法使HashMap具有线程安的能力，或者使用ConcurrentHashMap。<br>HashMap在JDK1.8之前的实现方式 数组+链表,但是在JDK1.8后对HashMap进行了底层优化,改为了由 数组+链表+红黑树实现,主要的目的是提高查找效率。</p><h4 id="Class-LinkedHashMap-lt-K-V-gt"><a href="#Class-LinkedHashMap-lt-K-V-gt" class="headerlink" title="Class LinkedHashMap&lt;K,V&gt;"></a>Class LinkedHashMap&lt;K,V&gt;</h4><p>LinkedHashMap继承于HashMap，哈希表和链表实现的Map接口，具有可预测的迭代次序。 这种实现不同于HashMap，它维持于所有条目的运行双向链表。 此链接列表定义迭代排序，通常是将键插入到地图（插入顺序 ）中的顺序 。 请注意，如果将键重新插入到地图中，则插入顺序不受影响。 （A键k被重新插入到地图m如果当m.containsKey(k)将返回true之前立即调用m.put(k, v)被调用。）</p><h4 id="Class-Hashtable-lt-K-V-gt"><a href="#Class-Hashtable-lt-K-V-gt" class="headerlink" title="Class Hashtable&lt;K,V&gt;"></a>Class Hashtable&lt;K,V&gt;</h4><p>该类实现了一个哈希表，它将键映射到值。 任何非null对象都可以用作键值或值。<br>为了从散列表成功存储和检索对象，用作键的对象必须实现hashCode方法和equals方法。<br>Hashtable是遗留类，很多映射的常用功能与HashMap类似，不同的是它承自Dictionary类，并且是线程安全的，任一时间只有一个线程能写Hashtable，并发性不如ConcurrentHashMap，因为ConcurrentHashMap引入了分段锁。Hashtable不建议在新代码中使用，不需要线程安全的场合可以用HashMap替换，需要线程安全的场合可以用ConcurrentHashMap替换。</p><h4 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h4><p>一个红黑树基于NavigableMap实现。 该地图是根据排序natural ordering其密钥，或通过Comparator在地图创建时提供，这取决于所使用的构造方法。<br>TreeMap实现SortedMap接口，能够把它保存的记录根据键排序，默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator遍历TreeMap时，得到的记录是排过序的。如果使用排序的映射，建议使用TreeMap。在使用TreeMap时，key必须实现Comparable接口或者在构造TreeMap传入自定义的Comparator，否则会在运行时抛出java.lang.ClassCastException类型的异常。</p>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;集合&quot;&gt;&lt;a href=&quot;#集合&quot; class=&quot;headerlink&quot; title=&quot;集合&quot;&gt;&lt;/a&gt;集合&lt;/h2&gt;&lt;p&gt;集合类的特点：提供一种存储空间可变的存储模式存储的数据容量可以随时发生改变。&lt;br&gt;和数组的区别：数组是存储同种数据类型、长度在定义后便不可变。&lt;br&gt;集合分为单列集合(Collection)和双列集合（Map）&lt;/p&gt;
+      &lt;h3 id=&quot;Map接口概述&quot;&gt;&lt;a href=&quot;#Map接口概述&quot; class=&quot;headerlink&quot; title=&quot;Map接口概述&quot;&gt;&lt;/a&gt;Map接口概述&lt;/h3&gt;&lt;p&gt;Map是双列集合的顶层接口，Map接口下是一个键值对（key-value）的映射接口，Map集合中，不能包含重复的键，每个键只能映射一个值（元素），值可以重复，因此可以根据key快速查找value的值。&lt;/p&gt;
     
     </summary>
     
     
       <category term="Java" scheme="https://lzyb.github.io/categories/Java/"/>
     
+    
+      <category term="集合" scheme="https://lzyb.github.io/tags/%E9%9B%86%E5%90%88/"/>
+    
+      <category term="双列集合" scheme="https://lzyb.github.io/tags/%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88/"/>
+    
+      <category term="Map" scheme="https://lzyb.github.io/tags/Map/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 单列集合</title>
+    <link href="https://lzyb.github.io/2017/03/20/Java-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/"/>
+    <id>https://lzyb.github.io/2017/03/20/Java-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/</id>
+    <published>2017-03-20T06:34:05.000Z</published>
+    <updated>2020-05-06T06:20:37.711Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合类的特点：提供一种存储空间可变的存储模式存储的数据容量可以随时发生改变。<br>和数组的区别：数组是存储同种数据类型、长度在定义后便不可变。<br>集合分为单列集合(Collection)和双列集合(Map)</p><a id="more"></a><h3 id="Collection集合的概述"><a href="#Collection集合的概述" class="headerlink" title="Collection集合的概述"></a>Collection集合的概述</h3><p>Collection是单列集合的顶层接口，它表示一组对象，这些对象也称为Collection的元素；JDK不提供此接口的任何直接实现，它提供更具体的子接口(如Set、List)实现。</p><h3 id="Collection常用的方法"><a href="#Collection常用的方法" class="headerlink" title="Collection常用的方法"></a>Collection常用的方法</h3><p>添加元素boolean add()、移除boolean remove()、清空void clear()、判断集合是否存在某个元素boolean contains()、判断集合是否为空boolean sEmpty()、获取集合的长度int size()。</p><h3 id="Collection集合的遍历-迭代器"><a href="#Collection集合的遍历-迭代器" class="headerlink" title="Collection集合的遍历(迭代器)"></a>Collection集合的遍历(迭代器)</h3><p>迭代器的介绍：是集合的专用遍历方式，通过集合的iterator iterator()方法得到。</p><p>迭代器的方法：hasNext()方法判断迭代中是否还有元素。如果有则调用next()方法返 下一个元素。值得一提的是增强for循环本质就是一个迭代器。</p><p>Collection集合按照不同的特点可分为两类子集合List和Set</p><h3 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h3><p>List集合的特点：有序(元素的存储顺序一致)、有索引、可重复。</p><p>List集合的常用方法：void add()、remove()、set()、get()。都是基于索引进行的增删改查。</p><p>列表迭代器：List集合的特有遍历，通过listIterator()方法得到。主要用途是可以沿着任一方向进行遍历，逆向方法hasPrevious()，Previous()。值得注意的是列表迭代器在迭代期间修改列表，返回迭代器的当前位置，所以在进行逆向遍历前先进行正向遍历。</p><h4 id="List集合的两个实现类："><a href="#List集合的两个实现类：" class="headerlink" title="List集合的两个实现类："></a>List集合的两个实现类：</h4><p>ArrayList：底层是数组，查询快，增删慢，线程不同步，效率高。</p><p>LinkedList：底层是链表，增删快，查询慢，线程不同步，效率高。特有方法first()可以获取(删除，得到)列表的一个元素，Last()同理。</p><h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3><p>Set集合的特点：无序，无索引(所以没有普通for循环)，唯一(不可重复)</p><h4 id="哈希值"><a href="#哈希值" class="headerlink" title="哈希值"></a>哈希值</h4><p>哈希值的概念：是JDK根据对象的地址或者字符串或者数字算出来的int类型的数值。</p><p>如何获取哈希值：通过object类中的hashcode()：返回对象的哈希值；</p><p>哈希值的特点：1、同一个对象调用hashCode()方法返回的哈希值是相同的；2、不同的对象可以通过重写hashCode()方法得到相同的哈希值。</p><h4 id="Set集合的三个实现类："><a href="#Set集合的三个实现类：" class="headerlink" title="Set集合的三个实现类："></a>Set集合的三个实现类：</h4><p>HashSet：底层是哈希表，无序，无索引(不能使用普通for),hashcode保证唯一性</p><p><img src="/img/hashset.png" alt="HashSet"></p><p>LinkedHashSet：底层是哈希表和链表，有序，无索引，唯一。</p><p>TreeSet：底层是二叉树，有序(指按照一定规则排序)，无索引，唯一。</p><p>自然排序：实现compareable接口，复写compareTo方法，当主要条件相等时要比较次要元素，保证唯一性的语句是compareTo方法return0</p><p>比较器排序：当元素不具备比较性，或者具备的比较性不符合需求，那么就让集合自身具备比较性，定义一个类实现Compare接口，重写compare()方法。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;集合&quot;&gt;&lt;a href=&quot;#集合&quot; class=&quot;headerlink&quot; title=&quot;集合&quot;&gt;&lt;/a&gt;集合&lt;/h2&gt;&lt;p&gt;集合类的特点：提供一种存储空间可变的存储模式存储的数据容量可以随时发生改变。&lt;br&gt;和数组的区别：数组是存储同种数据类型、长度在定义后便不可变。&lt;br&gt;集合分为单列集合(Collection)和双列集合(Map)&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://lzyb.github.io/categories/Java/"/>
+    
+    
+      <category term="集合" scheme="https://lzyb.github.io/tags/%E9%9B%86%E5%90%88/"/>
     
       <category term="单列集合" scheme="https://lzyb.github.io/tags/%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/"/>
     

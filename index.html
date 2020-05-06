@@ -101,7 +101,7 @@
     sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -301,7 +301,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Hao">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="image" content="/images/login.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -443,12 +443,158 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lzyb.github.io/2017/03/21/Java-%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Li Hao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/login.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李导师的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/21/Java-%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88/" itemprop="url">Java 双列集合</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-21T10:43:43+08:00">
+                2017-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="Map接口概述"><a href="#Map接口概述" class="headerlink" title="Map接口概述"></a>Map接口概述</h3><p>Map是双列集合的顶层接口，Map接口下是一个键值对（key-value）的映射接口，Map集合中，不能包含重复的键，每个键只能映射一个值（元素），值可以重复，因此可以根据key快速查找value的值。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/21/Java-%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://lzyb.github.io/2017/03/20/Java-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Hao">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="image" content="/images/login.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -535,7 +681,7 @@
 
       
         
-          <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合类的特点：提供一种存储空间可变的存储模式存储的数据容量可以随时发生改变。<br>和数组的区别：数组是存储同种数据类型、长度在定义后便不可变。<br>集合分为单列集合(Collection)和双列集合（Map）</p>
+          <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合类的特点：提供一种存储空间可变的存储模式存储的数据容量可以随时发生改变。<br>和数组的区别：数组是存储同种数据类型、长度在定义后便不可变。<br>集合分为单列集合(Collection)和双列集合(Map)</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/20/Java-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/#more" rel="contents">
@@ -612,7 +758,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/logo.png"
+                src="/images/login.jpg"
                 alt="Li Hao" />
             
               <p class="site-author-name" itemprop="name">Li Hao</p>
@@ -626,7 +772,7 @@
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -648,7 +794,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -721,8 +867,7 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Li Hao</span>
-
-  
+    
 </div>
 
 
