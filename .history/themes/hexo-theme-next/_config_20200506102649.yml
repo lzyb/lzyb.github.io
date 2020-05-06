@@ -160,7 +160,7 @@ links:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: /images/login.jpg
+avatar: /images/logo.png
 
 # Table Of Contents in the Sidebar
 toc:

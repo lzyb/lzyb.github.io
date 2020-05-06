@@ -1,0 +1,49 @@
+---
+title: Java 双列集合
+date: 2017-03-21 10:43:43
+categories: 
+- Java
+tags: 
+- 集合
+- 双列集合
+- Map 
+---
+### Map接口概述
+Map是双列集合的顶层接口，Map接口下是一个键值对（key-value）的映射接口，Map集合中，不能包含重复的键，每个键只能映射一个值（元素），值可以重复，因此可以根据key快速查找value的值。
+<!--more-->
+
+### Map接口常用的方法
+1、void clear()  从该地图中删除所有的映射（可选操作）。
+2、boolean containsKey(Object key) 如果此映射包含指定键的映射，则返回 true 。
+3、boolean containsKey(Object key) 如果此映射包含指定键的映射，则返回 true 。
+4、Set<Map.Entry<K,V>> entrySet() 返回此地图中包含的映射的Set视图。
+5、Set<K> keySet() 返回此地图中包含的键的Set视图。
+6、V 	put(K key, V value) 将指定的值与该映射中的指定键相关联（可选操作）。
+7、V    remove(Object key) 如果存在（从可选的操作），从该地图中删除一个键的映射。
+8、int  size() 返回此地图中键值映射的数量。
+
+### 常用实现类
+#### Class HashMap<K,V>
+基于哈希表的实现的Map接口。 此实现提供了所有可选的地图操作，并允许null的值和null键。 （ HashMap类大致相当于Hashtable ，除了它是不同步的，并允许null）。这个类不能保证地图的顺序; 特别是，它不能保证订单在一段时间内保持不变。
+HashMap非线程安全，即任一时刻可以有多个线程同时写HashMap，可能会导致数据的不一致。如果需要满足线程安全，可以用 Collections的synchronizedMap方法使HashMap具有线程安的能力，或者使用ConcurrentHashMap。
+HashMap在JDK1.8之前的实现方式 数组+链表,但是在JDK1.8后对HashMap进行了底层优化,改为了由 数组+链表+红黑树实现,主要的目的是提高查找效率。
+
+#### Class LinkedHashMap<K,V>
+LinkedHashMap继承于HashMap，哈希表和链表实现的Map接口，具有可预测的迭代次序。 这种实现不同于HashMap，它维持于所有条目的运行双向链表。 此链接列表定义迭代排序，通常是将键插入到地图（插入顺序 ）中的顺序 。 请注意，如果将键重新插入到地图中，则插入顺序不受影响。 （A键k被重新插入到地图m如果当m.containsKey(k)将返回true之前立即调用m.put(k, v)被调用。）
+
+#### Class Hashtable<K,V>
+该类实现了一个哈希表，它将键映射到值。 任何非null对象都可以用作键值或值。
+为了从散列表成功存储和检索对象，用作键的对象必须实现hashCode方法和equals方法。
+Hashtable是遗留类，很多映射的常用功能与HashMap类似，不同的是它承自Dictionary类，并且是线程安全的，任一时间只有一个线程能写Hashtable，并发性不如ConcurrentHashMap，因为ConcurrentHashMap引入了分段锁。Hashtable不建议在新代码中使用，不需要线程安全的场合可以用HashMap替换，需要线程安全的场合可以用ConcurrentHashMap替换。
+
+#### TreeMap
+一个红黑树基于NavigableMap实现。 该地图是根据排序natural ordering其密钥，或通过Comparator在地图创建时提供，这取决于所使用的构造方法。
+TreeMap实现SortedMap接口，能够把它保存的记录根据键排序，默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator遍历TreeMap时，得到的记录是排过序的。如果使用排序的映射，建议使用TreeMap。在使用TreeMap时，key必须实现Comparable接口或者在构造TreeMap传入自定义的Comparator，否则会在运行时抛出java.lang.ClassCastException类型的异常。
+
+
+
+
+
+
+
+

@@ -160,7 +160,7 @@ links:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: /images/login.jpg
+avatar: /images/logo.png
 
 # Table Of Contents in the Sidebar
 toc:
@@ -660,8 +660,8 @@ tabs:
 
 # Use velocity to animate everything.
 motion:
-  enable: true
-  async: true
+  enable: false
+  async: false
   transition:
     # Transition variants:
     # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
