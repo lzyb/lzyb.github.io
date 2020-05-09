@@ -98,7 +98,7 @@ menu:
   categories: /categories/||th
   archives: /archives/||archive
   #schedule: /schedule/ || calendar
-  sitemap: /sitemap.xml||sitemap
+  #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons.
@@ -143,7 +143,6 @@ social:
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
-  V2EX: https://www.v2ex.com/member/LZYBB
 
 social_icons:
   enable: true

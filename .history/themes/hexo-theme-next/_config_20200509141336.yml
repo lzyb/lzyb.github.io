@@ -35,7 +35,7 @@ favicon:
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "李昊的博客"
+keywords: "Hexo, NexT"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -98,7 +98,7 @@ menu:
   categories: /categories/||th
   archives: /archives/||archive
   #schedule: /schedule/ || calendar
-  sitemap: /sitemap.xml||sitemap
+  #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons.
@@ -143,7 +143,6 @@ social:
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
-  V2EX: https://www.v2ex.com/member/LZYBB
 
 social_icons:
   enable: true
@@ -539,8 +538,8 @@ rating:
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
   enable: true
-  app_id: 9Bx9uwyoureGhr1U6i9uHuYS-gzGzoHsz #<app_id>
-  app_key: iXefUDzjpNmEH22hdXqUlXtk #<app_key>
+  app_id: #<app_id>
+  app_key: #<app_key>
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId

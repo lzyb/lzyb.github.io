@@ -98,7 +98,7 @@ menu:
   categories: /categories/||th
   archives: /archives/||archive
   #schedule: /schedule/ || calendar
-  sitemap: /sitemap.xml||sitemap
+  #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons.
@@ -195,7 +195,7 @@ sidebar:
   #display: remove
 
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
-  offset: 12
+  offset: 15
 
   # Back to top in sidebar (only for Pisces | Gemini).
   b2t: false

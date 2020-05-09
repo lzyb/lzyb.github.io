@@ -98,7 +98,7 @@ menu:
   categories: /categories/||th
   archives: /archives/||archive
   #schedule: /schedule/ || calendar
-  sitemap: /sitemap.xml||sitemap
+  #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons.
@@ -256,7 +256,7 @@ post_wordcount:
 
 # Declare license on posts
 post_copyright:
-  enable: false
+  enable: true
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
