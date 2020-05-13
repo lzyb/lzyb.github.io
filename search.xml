@@ -1,41 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Java 单列集合</title>
-    <url>/2017/03/20/Java-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/</url>
-    <content><![CDATA[<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合类的特点：提供一种存储空间可变的存储模式存储的数据容量可以随时发生改变。<br>和数组的区别：数组是存储同种数据类型、长度在定义后便不可变。<br>集合分为单列集合(Collection)和双列集合(Map)</p>
-<a id="more"></a>
-<h3 id="Collection集合的概述"><a href="#Collection集合的概述" class="headerlink" title="Collection集合的概述"></a>Collection集合的概述</h3><p>Collection是单列集合的顶层接口，它表示一组对象，这些对象也称为Collection的元素；JDK不提供此接口的任何直接实现，它提供更具体的子接口(如Set、List)实现。</p>
-<h3 id="Collection常用的方法"><a href="#Collection常用的方法" class="headerlink" title="Collection常用的方法"></a>Collection常用的方法</h3><p>添加元素<code>boolean add()</code>、移除<code>boolean remove()</code>、清空<code>void clear()</code>、判断集合是否存在某个元素<code>boolean contains()</code>、判断集合是否为空<code>boolean sEmpty()</code>、获取集合的长度<code>int size()</code>。</p>
-<h3 id="Collection集合的遍历-迭代器"><a href="#Collection集合的遍历-迭代器" class="headerlink" title="Collection集合的遍历(迭代器)"></a>Collection集合的遍历(迭代器)</h3><p>迭代器的介绍：是集合的专用遍历方式，通过集合的iterator iterator()方法得到。</p>
-<p>迭代器的方法：hasNext()方法判断迭代中是否还有元素。如果有则调用next()方法返 下一个元素。值得一提的是增强for循环本质就是一个迭代器。</p>
-<p>Collection集合按照不同的特点可分为两类子集合List和Set</p>
-<h3 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h3><p>List集合的特点：有序(元素的存储顺序一致)、有索引、可重复。</p>
-<p>List集合的常用方法：void add()、remove()、set()、get()。都是基于索引进行的增删改查。</p>
-<p>列表迭代器：List集合的特有遍历，通过listIterator()方法得到。主要用途是可以沿着任一方向进行遍历，逆向方法hasPrevious()，Previous()。值得注意的是列表迭代器在迭代期间修改列表，返回迭代器的当前位置，所以在进行逆向遍历前先进行正向遍历。</p>
-<h4 id="List集合的两个实现类："><a href="#List集合的两个实现类：" class="headerlink" title="List集合的两个实现类："></a>List集合的两个实现类：</h4><p>ArrayList：底层是数组，查询快，增删慢，线程不同步，效率高。</p>
-<p>LinkedList：底层是链表，增删快，查询慢，线程不同步，效率高。特有方法first()可以获取(删除，得到)列表的一个元素，Last()同理。</p>
-<h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3><p>Set集合的特点：无序，无索引(所以没有普通for循环)，唯一(不可重复)</p>
-<h4 id="哈希值"><a href="#哈希值" class="headerlink" title="哈希值"></a>哈希值</h4><p>哈希值的概念：是JDK根据对象的地址或者字符串或者数字算出来的int类型的数值。</p>
-<p>如何获取哈希值：通过object类中的hashcode()：返回对象的哈希值；</p>
-<p>哈希值的特点：1、同一个对象调用hashCode()方法返回的哈希值是相同的；2、不同的对象可以通过重写hashCode()方法得到相同的哈希值。</p>
-<h4 id="Set集合的三个实现类："><a href="#Set集合的三个实现类：" class="headerlink" title="Set集合的三个实现类："></a>Set集合的三个实现类：</h4><p>HashSet：底层是哈希表，无序，无索引(不能使用普通for),hashcode保证唯一性</p>
-<p><img src="/img/hashset.png" alt="HashSet"></p>
-<p>LinkedHashSet：底层是哈希表和链表，有序，无索引，唯一。</p>
-<p>TreeSet：底层是二叉树，有序(指按照一定规则排序)，无索引，唯一。</p>
-<p>自然排序：实现compareable接口，复写compareTo方法，当主要条件相等时要比较次要元素，保证唯一性的语句是compareTo方法return0</p>
-<p>比较器排序：当元素不具备比较性，或者具备的比较性不符合需求，那么就让集合自身具备比较性，定义一个类实现Compare接口，重写compare()方法。</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>集合</tag>
-        <tag>单列集合</tag>
-        <tag>Collection</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java 函数式接口</title>
     <url>/2017/04/07/Java-%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/</url>
     <content><![CDATA[<h2 id="Java-8-函数式接口"><a href="#Java-8-函数式接口" class="headerlink" title="Java 8 函数式接口"></a>Java 8 函数式接口</h2><h3 id="函数接口概述"><a href="#函数接口概述" class="headerlink" title="函数接口概述"></a>函数接口概述</h3><p>函数式接口(Functional Interface)就是一个有且仅有一个抽象方法，但是可以有多个非抽象方法的接口。<br>函数式接口可以被隐式转换为 lambda 表达式。<br>Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上。</p>
@@ -83,6 +48,41 @@
         <tag>集合</tag>
         <tag>双列集合</tag>
         <tag>Map</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 单列集合</title>
+    <url>/2017/03/20/Java-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/</url>
+    <content><![CDATA[<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合类的特点：提供一种存储空间可变的存储模式存储的数据容量可以随时发生改变。<br>和数组的区别：数组是存储同种数据类型、长度在定义后便不可变。<br>集合分为单列集合(Collection)和双列集合(Map)</p>
+<a id="more"></a>
+<h3 id="Collection集合的概述"><a href="#Collection集合的概述" class="headerlink" title="Collection集合的概述"></a>Collection集合的概述</h3><p>Collection是单列集合的顶层接口，它表示一组对象，这些对象也称为Collection的元素；JDK不提供此接口的任何直接实现，它提供更具体的子接口(如Set、List)实现。</p>
+<h3 id="Collection常用的方法"><a href="#Collection常用的方法" class="headerlink" title="Collection常用的方法"></a>Collection常用的方法</h3><p>添加元素<code>boolean add()</code>、移除<code>boolean remove()</code>、清空<code>void clear()</code>、判断集合是否存在某个元素<code>boolean contains()</code>、判断集合是否为空<code>boolean sEmpty()</code>、获取集合的长度<code>int size()</code>。</p>
+<h3 id="Collection集合的遍历-迭代器"><a href="#Collection集合的遍历-迭代器" class="headerlink" title="Collection集合的遍历(迭代器)"></a>Collection集合的遍历(迭代器)</h3><p>迭代器的介绍：是集合的专用遍历方式，通过集合的iterator iterator()方法得到。</p>
+<p>迭代器的方法：hasNext()方法判断迭代中是否还有元素。如果有则调用next()方法返 下一个元素。值得一提的是增强for循环本质就是一个迭代器。</p>
+<p>Collection集合按照不同的特点可分为两类子集合List和Set</p>
+<h3 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h3><p>List集合的特点：有序(元素的存储顺序一致)、有索引、可重复。</p>
+<p>List集合的常用方法：void add()、remove()、set()、get()。都是基于索引进行的增删改查。</p>
+<p>列表迭代器：List集合的特有遍历，通过listIterator()方法得到。主要用途是可以沿着任一方向进行遍历，逆向方法hasPrevious()，Previous()。值得注意的是列表迭代器在迭代期间修改列表，返回迭代器的当前位置，所以在进行逆向遍历前先进行正向遍历。</p>
+<h4 id="List集合的两个实现类："><a href="#List集合的两个实现类：" class="headerlink" title="List集合的两个实现类："></a>List集合的两个实现类：</h4><p>ArrayList：底层是数组，查询快，增删慢，线程不同步，效率高。</p>
+<p>LinkedList：底层是链表，增删快，查询慢，线程不同步，效率高。特有方法first()可以获取(删除，得到)列表的一个元素，Last()同理。</p>
+<h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3><p>Set集合的特点：无序，无索引(所以没有普通for循环)，唯一(不可重复)</p>
+<h4 id="哈希值"><a href="#哈希值" class="headerlink" title="哈希值"></a>哈希值</h4><p>哈希值的概念：是JDK根据对象的地址或者字符串或者数字算出来的int类型的数值。</p>
+<p>如何获取哈希值：通过object类中的hashcode()：返回对象的哈希值；</p>
+<p>哈希值的特点：1、同一个对象调用hashCode()方法返回的哈希值是相同的；2、不同的对象可以通过重写hashCode()方法得到相同的哈希值。</p>
+<h4 id="Set集合的三个实现类："><a href="#Set集合的三个实现类：" class="headerlink" title="Set集合的三个实现类："></a>Set集合的三个实现类：</h4><p>HashSet：底层是哈希表，无序，无索引(不能使用普通for),hashcode保证唯一性</p>
+<p><img src="/img/hashset.png" alt="HashSet"></p>
+<p>LinkedHashSet：底层是哈希表和链表，有序，无索引，唯一。</p>
+<p>TreeSet：底层是二叉树，有序(指按照一定规则排序)，无索引，唯一。</p>
+<p>自然排序：实现compareable接口，复写compareTo方法，当主要条件相等时要比较次要元素，保证唯一性的语句是compareTo方法return0</p>
+<p>比较器排序：当元素不具备比较性，或者具备的比较性不符合需求，那么就让集合自身具备比较性，定义一个类实现Compare接口，重写compare()方法。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>集合</tag>
+        <tag>单列集合</tag>
+        <tag>Collection</tag>
       </tags>
   </entry>
   <entry>
