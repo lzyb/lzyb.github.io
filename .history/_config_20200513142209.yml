@@ -107,9 +107,8 @@ theme: hexo-theme-next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo:
-    github: https://github.com/lzyb/lzyb.github.io.git
-   
+  message: "update"
+  repo: git@106.12.180.99:/srv/gitrepo/myblog.git
   branch: master  
 
 # Extensions

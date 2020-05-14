@@ -109,7 +109,7 @@ deploy:
   type: git
   repo:
     github: https://github.com/lzyb/lzyb.github.io.git
-   
+    coding: https://e.coding.net/smiplenaive/myblog.git
   branch: master  
 
 # Extensions

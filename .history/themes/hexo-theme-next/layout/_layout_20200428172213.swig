@@ -46,7 +46,6 @@
         {% include '_partials/footer.swig' %}
         {% include '_third-party/analytics/analytics-with-widget.swig' %}
         {% block footer %}{% endblock %}
-        <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">冀ICP备18016220号-1</a>
       </div>
     </footer>
 
