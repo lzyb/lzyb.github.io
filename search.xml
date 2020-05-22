@@ -53,27 +53,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java 双列集合</title>
-    <url>/2017/03/21/Java-%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88/</url>
-    <content><![CDATA[<h3 id="Map接口概述"><a href="#Map接口概述" class="headerlink" title="Map接口概述"></a>Map接口概述</h3><p>Map是双列集合的顶层接口，Map接口下是一个键值对（key-value）的映射接口，Map集合中，不能包含重复的键，每个键只能映射一个值（元素），值可以重复，因此可以根据key快速查找value的值。</p>
-<a id="more"></a>
-
-<h3 id="Map接口常用的方法"><a href="#Map接口常用的方法" class="headerlink" title="Map接口常用的方法"></a>Map接口常用的方法</h3><p>1、<code>void clear()</code>  从该地图中删除所有的映射（可选操作）。<br>2、<code>boolean containsKey(Object key)</code> 如果此映射包含指定键的映射，则返回 true 。<br>3、<code>boolean containsValue(Object value)</code> 如果此地图将一个或多个键映射到指定的值，则返回 true 。<br>4、<code>Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()</code> 返回此地图中包含的映射的Set视图。<br>5、<code>Set&lt;K&gt; keySet()</code>返回此地图中包含的键的Set视图。<br>6、<code>V     put(K key, V value)</code> 将指定的值与该映射中的指定键相关联（可选操作）。<br>7、<code>V    remove(Object key)</code> 如果存在（从可选的操作），从该地图中删除一个键的映射。<br>8、<code>int  size()</code> 返回此地图中键值映射的数量。</p>
-<h3 id="常用实现类"><a href="#常用实现类" class="headerlink" title="常用实现类"></a>常用实现类</h3><h4 id="Class-HashMap-lt-K-V-gt"><a href="#Class-HashMap-lt-K-V-gt" class="headerlink" title="Class HashMap&lt;K,V&gt;"></a>Class HashMap&lt;K,V&gt;</h4><p>基于哈希表的实现的Map接口。 此实现提供了所有可选的地图操作，并允许null的值和null键。 （ HashMap类大致相当于Hashtable ，除了它是不同步的，并允许null）。这个类不能保证地图的顺序; 特别是，它不能保证订单在一段时间内保持不变。<br>HashMap非线程安全，即任一时刻可以有多个线程同时写HashMap，可能会导致数据的不一致。如果需要满足线程安全，可以用 Collections的synchronizedMap方法使HashMap具有线程安的能力，或者使用ConcurrentHashMap。<br>HashMap在JDK1.8之前的实现方式 数组+链表,但是在JDK1.8后对HashMap进行了底层优化,改为了由 数组+链表+红黑树实现,主要的目的是提高查找效率。</p>
-<h4 id="Class-LinkedHashMap-lt-K-V-gt"><a href="#Class-LinkedHashMap-lt-K-V-gt" class="headerlink" title="Class LinkedHashMap&lt;K,V&gt;"></a>Class LinkedHashMap&lt;K,V&gt;</h4><p>LinkedHashMap继承于HashMap，哈希表和链表实现的Map接口，具有可预测的迭代次序。 这种实现不同于HashMap，它维持于所有条目的运行双向链表。 此链接列表定义迭代排序，通常是将键插入到地图（插入顺序 ）中的顺序 。 请注意，如果将键重新插入到地图中，则插入顺序不受影响。 （A键k被重新插入到地图m如果当m.containsKey(k)将返回true之前立即调用m.put(k, v)被调用。）</p>
-<h4 id="Class-Hashtable-lt-K-V-gt"><a href="#Class-Hashtable-lt-K-V-gt" class="headerlink" title="Class Hashtable&lt;K,V&gt;"></a>Class Hashtable&lt;K,V&gt;</h4><p>该类实现了一个哈希表，它将键映射到值。 任何非null对象都可以用作键值或值。<br>为了从散列表成功存储和检索对象，用作键的对象必须实现hashCode方法和equals方法。<br>Hashtable是遗留类，很多映射的常用功能与HashMap类似，不同的是它承自Dictionary类，并且是线程安全的，任一时间只有一个线程能写Hashtable，并发性不如ConcurrentHashMap，因为ConcurrentHashMap引入了分段锁。Hashtable不建议在新代码中使用，不需要线程安全的场合可以用HashMap替换，需要线程安全的场合可以用ConcurrentHashMap替换。</p>
-<h4 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h4><p>一个红黑树基于NavigableMap实现。 该地图是根据排序natural ordering其密钥，或通过Comparator在地图创建时提供，这取决于所使用的构造方法。<br>TreeMap实现SortedMap接口，能够把它保存的记录根据键排序，默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator遍历TreeMap时，得到的记录是排过序的。如果使用排序的映射，建议使用TreeMap。在使用TreeMap时，key必须实现Comparable接口或者在构造TreeMap传入自定义的Comparator，否则会在运行时抛出java.lang.ClassCastException类型的异常。</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>集合</tag>
-        <tag>双列集合</tag>
-        <tag>Map</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java 函数式接口</title>
     <url>/2017/04/07/Java-%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/</url>
     <content><![CDATA[<h2 id="Java-8-函数式接口"><a href="#Java-8-函数式接口" class="headerlink" title="Java 8 函数式接口"></a>Java 8 函数式接口</h2><h3 id="函数接口概述"><a href="#函数接口概述" class="headerlink" title="函数接口概述"></a>函数接口概述</h3><p>函数式接口(Functional Interface)就是一个有且仅有一个抽象方法，但是可以有多个非抽象方法的接口。<br>函数式接口可以被隐式转换为 lambda 表达式。<br>Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上。</p>
@@ -100,6 +79,123 @@
         <tag>函数式接口</tag>
         <tag>接口</tag>
         <tag>Java8</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 双列集合</title>
+    <url>/2017/03/21/Java-%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88/</url>
+    <content><![CDATA[<h3 id="Map接口概述"><a href="#Map接口概述" class="headerlink" title="Map接口概述"></a>Map接口概述</h3><p>Map是双列集合的顶层接口，Map接口下是一个键值对（key-value）的映射接口，Map集合中，不能包含重复的键，每个键只能映射一个值（元素），值可以重复，因此可以根据key快速查找value的值。</p>
+<a id="more"></a>
+
+<h3 id="Map接口常用的方法"><a href="#Map接口常用的方法" class="headerlink" title="Map接口常用的方法"></a>Map接口常用的方法</h3><p>1、<code>void clear()</code>  从该地图中删除所有的映射（可选操作）。<br>2、<code>boolean containsKey(Object key)</code> 如果此映射包含指定键的映射，则返回 true 。<br>3、<code>boolean containsValue(Object value)</code> 如果此地图将一个或多个键映射到指定的值，则返回 true 。<br>4、<code>Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()</code> 返回此地图中包含的映射的Set视图。<br>5、<code>Set&lt;K&gt; keySet()</code>返回此地图中包含的键的Set视图。<br>6、<code>V     put(K key, V value)</code> 将指定的值与该映射中的指定键相关联（可选操作）。<br>7、<code>V    remove(Object key)</code> 如果存在（从可选的操作），从该地图中删除一个键的映射。<br>8、<code>int  size()</code> 返回此地图中键值映射的数量。</p>
+<h3 id="常用实现类"><a href="#常用实现类" class="headerlink" title="常用实现类"></a>常用实现类</h3><h4 id="Class-HashMap-lt-K-V-gt"><a href="#Class-HashMap-lt-K-V-gt" class="headerlink" title="Class HashMap&lt;K,V&gt;"></a>Class HashMap&lt;K,V&gt;</h4><p>基于哈希表的实现的Map接口。 此实现提供了所有可选的地图操作，并允许null的值和null键。 （ HashMap类大致相当于Hashtable ，除了它是不同步的，并允许null）。这个类不能保证地图的顺序; 特别是，它不能保证订单在一段时间内保持不变。<br>HashMap非线程安全，即任一时刻可以有多个线程同时写HashMap，可能会导致数据的不一致。如果需要满足线程安全，可以用 Collections的synchronizedMap方法使HashMap具有线程安的能力，或者使用ConcurrentHashMap。<br>HashMap在JDK1.8之前的实现方式 数组+链表,但是在JDK1.8后对HashMap进行了底层优化,改为了由 数组+链表+红黑树实现,主要的目的是提高查找效率。</p>
+<h4 id="Class-LinkedHashMap-lt-K-V-gt"><a href="#Class-LinkedHashMap-lt-K-V-gt" class="headerlink" title="Class LinkedHashMap&lt;K,V&gt;"></a>Class LinkedHashMap&lt;K,V&gt;</h4><p>LinkedHashMap继承于HashMap，哈希表和链表实现的Map接口，具有可预测的迭代次序。 这种实现不同于HashMap，它维持于所有条目的运行双向链表。 此链接列表定义迭代排序，通常是将键插入到地图（插入顺序 ）中的顺序 。 请注意，如果将键重新插入到地图中，则插入顺序不受影响。 （A键k被重新插入到地图m如果当m.containsKey(k)将返回true之前立即调用m.put(k, v)被调用。）</p>
+<h4 id="Class-Hashtable-lt-K-V-gt"><a href="#Class-Hashtable-lt-K-V-gt" class="headerlink" title="Class Hashtable&lt;K,V&gt;"></a>Class Hashtable&lt;K,V&gt;</h4><p>该类实现了一个哈希表，它将键映射到值。 任何非null对象都可以用作键值或值。<br>为了从散列表成功存储和检索对象，用作键的对象必须实现hashCode方法和equals方法。<br>Hashtable是遗留类，很多映射的常用功能与HashMap类似，不同的是它承自Dictionary类，并且是线程安全的，任一时间只有一个线程能写Hashtable，并发性不如ConcurrentHashMap，因为ConcurrentHashMap引入了分段锁。Hashtable不建议在新代码中使用，不需要线程安全的场合可以用HashMap替换，需要线程安全的场合可以用ConcurrentHashMap替换。</p>
+<h4 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h4><p>一个红黑树基于NavigableMap实现。 该地图是根据排序natural ordering其密钥，或通过Comparator在地图创建时提供，这取决于所使用的构造方法。<br>TreeMap实现SortedMap接口，能够把它保存的记录根据键排序，默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator遍历TreeMap时，得到的记录是排过序的。如果使用排序的映射，建议使用TreeMap。在使用TreeMap时，key必须实现Comparable接口或者在构造TreeMap传入自定义的Comparator，否则会在运行时抛出java.lang.ClassCastException类型的异常。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>集合</tag>
+        <tag>双列集合</tag>
+        <tag>Map</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>$.when().done().then()的用法</title>
+    <url>/2017/05/22/when-done-then-%E7%9A%84%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<p>摘自阮一峰的博客</p>
+<h3 id="什么是deferred对象？"><a href="#什么是deferred对象？" class="headerlink" title="什么是deferred对象？"></a>什么是deferred对象？</h3><p>开发网站的过程中，我们经常遇到某些耗时很长的javascript操作。其中，既有异步的操作（比如ajax读取服务器数据），也有同步的操作（比如遍历一个大型数组），它们都不是立即能得到结果的。</p>
+<p>通常的做法是，为它们指定回调函数（callback）。即事先规定，一旦它们运行结束，应该调用哪些函数。</p>
+<p>但是，在回调函数方面，jQuery的功能非常弱。为了改变这一点，jQuery开发团队就设计了deferred对象。</p>
+<p>简单说，<code>deferred</code>对象就是jQuery的回调函数解决方案。在英语中，defer的意思是”延迟”，所以<code>deferred</code>对象的含义就是”延迟”到未来某个点再执行。</p>
+<p>它解决了如何处理耗时操作的问题，对那些操作提供了更好的控制，以及统一的编程接口。它的主要功能，可以归结为四点。下面我们通过示例代码，一步步来学习。</p>
+<a id="more"></a>
+<h3 id="ajax操作的链式写法"><a href="#ajax操作的链式写法" class="headerlink" title="ajax操作的链式写法"></a>ajax操作的链式写法</h3><p>首先，回顾一下jQuery的ajax操作的传统写法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　$.ajax(&#123;</span><br><span class="line"></span><br><span class="line">　　　　url: <span class="string">"test.html"</span>,</span><br><span class="line"></span><br><span class="line">　　　　success: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">　　　　　　alert(<span class="string">"哈哈，成功了！"</span>);</span><br><span class="line">　　　　&#125;,</span><br><span class="line"></span><br><span class="line">　　　　error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">　　　　　　alert(<span class="string">"出错啦！"</span>);</span><br><span class="line">　　　　&#125;</span><br><span class="line"></span><br><span class="line">　　&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>在上面的代码中，$.ajax()接受一个对象参数，这个对象包含两个方法：success方法指定操作成功后的回调函数，error方法指定操作失败后的回调函数。</p>
+<p>$.ajax()操作完成后，如果使用的是低于1.5.0版本的jQuery，返回的是XHR对象，你没法进行链式操作；如果高于1.5.0版本，返回的是deferred对象，可以进行链式操作。</p>
+<p>现在，新的写法是这样的：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　$.ajax(<span class="string">"test.html"</span>)</span><br><span class="line"></span><br><span class="line">　　.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"哈哈，成功了！"</span>); &#125;)</span><br><span class="line"></span><br><span class="line">　　.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"出错啦！"</span>); &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，done()相当于success方法，fail()相当于error方法。采用链式写法以后，代码的可读性大大提高。</p>
+<h3 id="指定同一操作的多个回调函数"><a href="#指定同一操作的多个回调函数" class="headerlink" title="指定同一操作的多个回调函数"></a>指定同一操作的多个回调函数</h3><p>deferred对象的一大好处，就是它允许你自由添加多个回调函数。</p>
+<p>还是以上面的代码为例，如果ajax操作成功后，除了原来的回调函数，我还想再运行一个回调函数，怎么办？</p>
+<p>很简单，直接把它加在后面就行了。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　$.ajax(<span class="string">"test.html"</span>)</span><br><span class="line"></span><br><span class="line">　　.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"哈哈，成功了！"</span>);&#125; )</span><br><span class="line"></span><br><span class="line">　　.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"出错啦！"</span>); &#125; )</span><br><span class="line"></span><br><span class="line">　　.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"第二个回调函数！"</span>);&#125; );</span><br></pre></td></tr></table></figure>
+
+
+<p>回调函数可以添加任意多个，它们按照添加顺序执行。</p>
+<h3 id="为多个操作指定回调函数"><a href="#为多个操作指定回调函数" class="headerlink" title="为多个操作指定回调函数"></a>为多个操作指定回调函数</h3><p>deferred对象的另一大好处，就是它允许你为多个事件指定一个回调函数，这是传统写法做不到的。</p>
+<p>请看下面的代码，它用到了一个新的方法$.when()：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　$.when($.ajax(<span class="string">"test1.html"</span>), $.ajax(<span class="string">"test2.html"</span>))</span><br><span class="line"></span><br><span class="line">　　.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"哈哈，成功了！"</span>); &#125;)</span><br><span class="line"></span><br><span class="line">　　.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"出错啦！"</span>); &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>这段代码的意思是，先执行两个操作$.ajax(“test1.html”)和$.ajax(“test2.html”)，如果都成功了，就运行done()指定的回调函数；如果有一个失败或都失败了，就执行fail()指定的回调函数。</p>
+<h3 id="普通操作的回调函数接口（上）"><a href="#普通操作的回调函数接口（上）" class="headerlink" title="普通操作的回调函数接口（上）"></a>普通操作的回调函数接口（上）</h3><p>deferred对象的最大优点，就是它把这一套回调函数接口，从ajax操作扩展到了所有操作。也就是说，任何一个操作—-不管是ajax操作还是本地操作，也不管是异步操作还是同步操作—-都可以使用deferred对象的各种方法，指定回调函数。</p>
+<p>我们来看一个具体的例子。假定有一个很耗时的操作wait：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　<span class="keyword">var</span> wait = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">var</span> tasks = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　　　alert(<span class="string">"执行完毕！"</span>);</span><br><span class="line"></span><br><span class="line">　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　setTimeout(tasks,<span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br></pre></td></tr></table></figure>
+<p>我们为它指定回调函数，应该怎么做呢？</p>
+<p>很自然的，你会想到，可以使用$.when()：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　$.when(wait())</span><br><span class="line"></span><br><span class="line">　　.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"哈哈，成功了！"</span>); &#125;)</span><br><span class="line"></span><br><span class="line">　　.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"出错啦！"</span>); &#125;);</span><br></pre></td></tr></table></figure>
+
+
+<p>但是，这样写的话，done()方法会立即执行，起不到回调函数的作用。原因在于$.when()的参数只能是deferred对象，所以必须对wait()进行改写：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　<span class="keyword">var</span> dtd = $.deferred(); <span class="comment">// 新建一个deferred对象</span></span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> wait = <span class="function"><span class="keyword">function</span>(<span class="params">dtd</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">var</span> tasks = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　　　alert(<span class="string">"执行完毕！"</span>);</span><br><span class="line"></span><br><span class="line">　　　　　　dtd.resolve(); <span class="comment">// 改变deferred对象的执行状态</span></span><br><span class="line"></span><br><span class="line">　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　setTimeout(tasks,<span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">return</span> dtd;</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br></pre></td></tr></table></figure>
+<p>现在，wait()函数返回的是deferred对象，这就可以加上链式操作了。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　$.when(wait(dtd))</span><br><span class="line"></span><br><span class="line">　　.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"哈哈，成功了！"</span>); &#125;)</span><br><span class="line"></span><br><span class="line">　　.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"出错啦！"</span>); &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>wait()函数运行完，就会自动运行done()方法指定的回调函数。</p>
+<h3 id="deferred-resolve-方法和deferred-reject-方法"><a href="#deferred-resolve-方法和deferred-reject-方法" class="headerlink" title="deferred.resolve()方法和deferred.reject()方法"></a>deferred.resolve()方法和deferred.reject()方法</h3><p>如果仔细看，你会发现在上面的wait()函数中，还有一个地方我没讲解。那就是dtd.resolve()的作用是什么？</p>
+<p>要说清楚这个问题，就要引入一个新概念”执行状态”。jQuery规定，deferred对象有三种执行状态—-未完成，已完成和已失败。如果执行状态是”已完成”（resolved）,deferred对象立刻调用done()方法指定的回调函数；如果执行状态是”已失败”，调用fail()方法指定的回调函数；如果执行状态是”未完成”，则继续等待，或者调用progress()方法指定的回调函数（jQuery1.7版本添加）。</p>
+<p>前面部分的ajax操作时，deferred对象会根据返回结果，自动改变自身的执行状态；但是，在wait()函数中，这个执行状态必须由程序员手动指定。dtd.resolve()的意思是，将dtd对象的执行状态从”未完成”改为”已完成”，从而触发done()方法。</p>
+<p>类似的，还存在一个deferred.reject()方法，作用是将dtd对象的执行状态从”未完成”改为”已失败”，从而触发fail()方法。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　<span class="keyword">var</span> dtd = $.deferred(); <span class="comment">// 新建一个deferred对象</span></span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> wait = <span class="function"><span class="keyword">function</span>(<span class="params">dtd</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">var</span> tasks = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　　　alert(<span class="string">"执行完毕！"</span>);</span><br><span class="line"></span><br><span class="line">　　　　　　dtd.reject(); <span class="comment">// 改变deferred对象的执行状态</span></span><br><span class="line"></span><br><span class="line">　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　setTimeout(tasks,<span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">return</span> dtd;</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　$.when(wait(dtd))</span><br><span class="line"></span><br><span class="line">　　.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"哈哈，成功了！"</span>); &#125;)</span><br><span class="line"></span><br><span class="line">　　.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"出错啦！"</span>); &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="deferred-promise-方法"><a href="#deferred-promise-方法" class="headerlink" title="deferred.promise()方法"></a>deferred.promise()方法</h3><p>上面这种写法，还是有问题。那就是dtd是一个全局对象，所以它的执行状态可以从外部改变。</p>
+<p>请看下面的代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　<span class="keyword">var</span> dtd = $.deferred(); <span class="comment">// 新建一个deferred对象</span></span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> wait = <span class="function"><span class="keyword">function</span>(<span class="params">dtd</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">var</span> tasks = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　　　alert(<span class="string">"执行完毕！"</span>);</span><br><span class="line"></span><br><span class="line">　　　　　　dtd.resolve(); <span class="comment">// 改变deferred对象的执行状态</span></span><br><span class="line"></span><br><span class="line">　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　setTimeout(tasks,<span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">return</span> dtd;</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　$.when(wait(dtd))</span><br><span class="line"></span><br><span class="line">　　.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"哈哈，成功了！"</span>); &#125;)</span><br><span class="line"></span><br><span class="line">　　.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"出错啦！"</span>); &#125;);</span><br><span class="line"></span><br><span class="line">　　dtd.resolve();</span><br></pre></td></tr></table></figure>
+
+<p>我在代码的尾部加了一行dtd.resolve()，这就改变了dtd对象的执行状态，因此导致done()方法立刻执行，跳出”哈哈，成功了！”的提示框，等5秒之后再跳出”执行完毕！”的提示框。</p>
+<p>为了避免这种情况，jQuery提供了deferred.promise()方法。它的作用是，在原来的deferred对象上返回另一个deferred对象，后者只开放与改变执行状态无关的方法（比如done()方法和fail()方法），屏蔽与改变执行状态有关的方法（比如resolve()方法和reject()方法），从而使得执行状态不能被改变。</p>
+<p>请看下面的代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　<span class="keyword">var</span> dtd = $.deferred(); <span class="comment">// 新建一个deferred对象</span></span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> wait = <span class="function"><span class="keyword">function</span>(<span class="params">dtd</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">var</span> tasks = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　　　alert(<span class="string">"执行完毕！"</span>);</span><br><span class="line"></span><br><span class="line">　　　　　　dtd.resolve(); <span class="comment">// 改变deferred对象的执行状态</span></span><br><span class="line"></span><br><span class="line">　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　setTimeout(tasks,<span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">return</span> dtd.promise(); <span class="comment">// 返回promise对象</span></span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> d = wait(dtd); <span class="comment">// 新建一个d对象，改为对这个对象进行操作</span></span><br><span class="line"></span><br><span class="line">　　$.when(d)</span><br><span class="line"></span><br><span class="line">　　.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"哈哈，成功了！"</span>); &#125;)</span><br><span class="line"></span><br><span class="line">　　.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"出错啦！"</span>); &#125;);</span><br><span class="line"></span><br><span class="line">　　d.resolve(); <span class="comment">// 此时，这个语句是无效的</span></span><br></pre></td></tr></table></figure>
+
+<p>在上面的这段代码中，wait()函数返回的是promise对象。然后，我们把回调函数绑定在这个对象上面，而不是原来的deferred对象上面。这样的好处是，无法改变这个对象的执行状态，要想改变执行状态，只能操作原来的deferred对象。</p>
+<p>不过，更好的写法是allenm所指出的，将dtd对象变成wait(）函数的内部对象。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　<span class="keyword">var</span> wait = <span class="function"><span class="keyword">function</span>(<span class="params">dtd</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">var</span> dtd = $.deferred(); <span class="comment">//在函数内部，新建一个deferred对象</span></span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">var</span> tasks = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　　　alert(<span class="string">"执行完毕！"</span>);</span><br><span class="line"></span><br><span class="line">　　　　　　dtd.resolve(); <span class="comment">// 改变deferred对象的执行状态</span></span><br><span class="line"></span><br><span class="line">　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　setTimeout(tasks,<span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">return</span> dtd.promise(); <span class="comment">// 返回promise对象</span></span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　$.when(wait())</span><br><span class="line"></span><br><span class="line">　　.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"哈哈，成功了！"</span>); &#125;)</span><br><span class="line"></span><br><span class="line">　　.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"出错啦！"</span>); &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="普通操作的回调函数接口（中）"><a href="#普通操作的回调函数接口（中）" class="headerlink" title="普通操作的回调函数接口（中）"></a>普通操作的回调函数接口（中）</h3><p>另一种防止执行状态被外部改变的方法，是使用deferred对象的建构函数$.deferred()。</p>
+<p>这时，wait函数还是保持不变，我们直接把它传入$.deferred()：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　$.deferred(wait)</span><br><span class="line"></span><br><span class="line">　　.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"哈哈，成功了！"</span>); &#125;)</span><br><span class="line"></span><br><span class="line">　　.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"出错啦！"</span>); &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>jQuery规定，$.deferred()可以接受一个函数名（注意，是函数名）作为参数，$.deferred()所生成的deferred对象将作为这个函数的默认参数。</p>
+<h3 id="普通操作的回调函数接口（下）"><a href="#普通操作的回调函数接口（下）" class="headerlink" title="普通操作的回调函数接口（下）"></a>普通操作的回调函数接口（下）</h3><p>除了上面两种方法以外，我们还可以直接在wait对象上部署deferred接口。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　<span class="keyword">var</span> dtd = $.deferred(); <span class="comment">// 生成deferred对象</span></span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> wait = <span class="function"><span class="keyword">function</span>(<span class="params">dtd</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">var</span> tasks = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　　　alert(<span class="string">"执行完毕！"</span>);</span><br><span class="line"></span><br><span class="line">　　　　　　dtd.resolve(); <span class="comment">// 改变deferred对象的执行状态</span></span><br><span class="line"></span><br><span class="line">　　　　&#125;;</span><br><span class="line"></span><br><span class="line">　　　　setTimeout(tasks,<span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line">　　&#125;;</span><br><span class="line"></span><br><span class="line">　　dtd.promise(wait);</span><br><span class="line"></span><br><span class="line">　　wait.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"哈哈，成功了！"</span>); &#125;)</span><br><span class="line"></span><br><span class="line">　　.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">"出错啦！"</span>); &#125;);</span><br><span class="line"></span><br><span class="line">　　wait(dtd);</span><br></pre></td></tr></table></figure>
+
+<p>这里的关键是dtd.promise(wait)这一行，它的作用就是在wait对象上部署deferred接口。正是因为有了这一行，后面才能直接在wait上面调用done()和fail()。</p>
+<h3 id="小结：deferred对象的方法"><a href="#小结：deferred对象的方法" class="headerlink" title="小结：deferred对象的方法"></a>小结：deferred对象的方法</h3><p>前面已经讲到了deferred对象的多种方法，下面做一个总结：</p>
+<p>　　（1） $.deferred() 生成一个deferred对象。</p>
+<p>　　（2） deferred.done() 指定操作成功时的回调函数</p>
+<p>　　（3） deferred.fail() 指定操作失败时的回调函数</p>
+<p>　　（4） deferred.promise() 没有参数时，返回一个新的deferred对象，该对象的运行状态无法被改变；接受参数时，作用为在参数对象上部署deferred接口。</p>
+<p>　　（5） deferred.resolve() 手动改变deferred对象的运行状态为”已完成”，从而立即触发done()方法。</p>
+<p>　　（6）deferred.reject() 这个方法与deferred.resolve()正好相反，调用后将deferred对象的运行状态变为”已失败”，从而立即触发fail()方法。</p>
+<p>　　（7） $.when() 为多个操作指定回调函数。</p>
+<p>除了这些方法以外，deferred对象还有二个重要方法，上面的教程中没有涉及到。</p>
+<p>　　（8）deferred.then()</p>
+<p>有时为了省事，可以把done()和fail()合在一起写，这就是then()方法。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　$.when($.ajax( <span class="string">"/main.php"</span> ))</span><br><span class="line"></span><br><span class="line">　　.then(successFunc, failureFunc );</span><br></pre></td></tr></table></figure>
+<p>如果then()有两个参数，那么第一个参数是done()方法的回调函数，第二个参数是fail()方法的回调方法。如果then()只有一个参数，那么等同于done()。</p>
+<p>　　（9）deferred.always()</p>
+<p>这个方法也是用来指定回调函数的，它的作用是，不管调用的是deferred.resolve()还是deferred.reject()，最后总是执行。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">　　$.ajax( <span class="string">"test.html"</span> )</span><br><span class="line"></span><br><span class="line">　　.always( <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; alert(<span class="string">"已执行！"</span>);&#125; );</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>jQuery</tag>
       </tags>
   </entry>
   <entry>
