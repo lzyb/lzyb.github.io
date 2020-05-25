@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Git常用命令</title>
-    <url>/2017/05/13/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h3 id="常用Git命令"><a href="#常用Git命令" class="headerlink" title="常用Git命令"></a>常用Git命令</h3><p><code>git init</code> [project-name] 初始化 在工作路径上创建主分支<br><code>git config [--global] user.name &quot;[name]&quot;</code> 设置提交代码时的用户信息<br><code>git config [--global] user.email &quot;[email address]&quot;</code>设置提交代码时的用户信息<br><code>git clone</code> [地址]  克隆远程仓库<br><code>git clone -b</code> [分支名] [地址] 克隆分支的代码到本地<br><code>git add -A</code> 保存所有的修改<br><code>git add .</code> 保存新的添加和修改，但是不包括删除<br><code>git add -u</code> 保存修改和删除，但是不包括新建文件。<br>所以默认使用git add -A就行<br><code>git commit –m</code> “本次提交描述” commit可以一次提交缓冲区的所有文件，相当于一个版本。<br><code>git pull origin</code> [分支名] 从指定分支获取最新迭代<br><code>git push origin</code> [分支名] 推送当前迭代到制动分支</p>
-<a id="more"></a>
-
-<p><code>git status</code>  查看状态<br><code>git push -- force</code> 强制推送</p>
-<h3 id="分支命令"><a href="#分支命令" class="headerlink" title="分支命令"></a>分支命令</h3><p><code>git branch</code> 查看当前分支<br><code>git branch</code> [分支名] 新建分支<br><code>git checkout</code> [分支名] 切换分支<br><code>git checkout -b</code> [分支名]  创建并切换分支<br><code>git branch -v</code>  查看分支以及提交hash值和commit信息<br><code>git merge</code> [分支名] 把该分支的内容合并到现有分支上<br><code>git branch -d</code> [分支名]  删除分支<br><code>git branch -D</code> [分支名]  强制删除 若没有其他分支合并就删除 d会提示 D不会<br><code>git branch -m</code> [旧分支名] [新分支名]  修改分支名<br><code>git branch -M</code> [旧分支名] [新分支名]  修改分支名 M强制修改 若与其他分支有冲突也会创建(慎用)<br><code>git branch -r</code> // 列出远程分支(远程所有分支名)<br><code>git branch -a</code> // 查看远程分支(列出远程分支以及本地分支名)<br><code>git fetch</code> 更新remote索引<br><code>git push -u origin</code> [分支名]  将本地分支推送到origin主机，同时指定origin为默认主机</p>
-]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>常用命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java 单列集合</title>
     <url>/2017/03/20/Java-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88/</url>
     <content><![CDATA[<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合类的特点：提供一种存储空间可变的存储模式存储的数据容量可以随时发生改变。<br>和数组的区别：数组是存储同种数据类型、长度在定义后便不可变。<br>集合分为单列集合(Collection)和双列集合(Map)</p>
@@ -100,6 +83,23 @@
         <tag>集合</tag>
         <tag>双列集合</tag>
         <tag>Map</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git常用命令</title>
+    <url>/2017/05/13/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h3 id="常用Git命令"><a href="#常用Git命令" class="headerlink" title="常用Git命令"></a>常用Git命令</h3><p><code>git init</code> [project-name] 初始化 在工作路径上创建主分支<br><code>git config [--global] user.name &quot;[name]&quot;</code> 设置提交代码时的用户信息<br><code>git config [--global] user.email &quot;[email address]&quot;</code>设置提交代码时的用户信息<br><code>git clone</code> [地址]  克隆远程仓库<br><code>git clone -b</code> [分支名] [地址] 克隆分支的代码到本地<br><code>git add -A</code> 保存所有的修改<br><code>git add .</code> 保存新的添加和修改，但是不包括删除<br><code>git add -u</code> 保存修改和删除，但是不包括新建文件。<br>所以默认使用git add -A就行<br><code>git commit –m</code> “本次提交描述” commit可以一次提交缓冲区的所有文件，相当于一个版本。<br><code>git pull origin</code> [分支名] 从指定分支获取最新迭代<br><code>git push origin</code> [分支名] 推送当前迭代到制动分支</p>
+<a id="more"></a>
+
+<p><code>git status</code>  查看状态<br><code>git push -- force</code> 强制推送</p>
+<h3 id="分支命令"><a href="#分支命令" class="headerlink" title="分支命令"></a>分支命令</h3><p><code>git branch</code> 查看当前分支<br><code>git branch</code> [分支名] 新建分支<br><code>git checkout</code> [分支名] 切换分支<br><code>git checkout -b</code> [分支名]  创建并切换分支<br><code>git branch -v</code>  查看分支以及提交hash值和commit信息<br><code>git merge</code> [分支名] 把该分支的内容合并到现有分支上<br><code>git branch -d</code> [分支名]  删除分支<br><code>git branch -D</code> [分支名]  强制删除 若没有其他分支合并就删除 d会提示 D不会<br><code>git branch -m</code> [旧分支名] [新分支名]  修改分支名<br><code>git branch -M</code> [旧分支名] [新分支名]  修改分支名 M强制修改 若与其他分支有冲突也会创建(慎用)<br><code>git branch -r</code> // 列出远程分支(远程所有分支名)<br><code>git branch -a</code> // 查看远程分支(列出远程分支以及本地分支名)<br><code>git fetch</code> 更新remote索引<br><code>git push -u origin</code> [分支名]  将本地分支推送到origin主机，同时指定origin为默认主机</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>常用命令</tag>
       </tags>
   </entry>
   <entry>
