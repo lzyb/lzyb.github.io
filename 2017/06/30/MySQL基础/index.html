@@ -99,7 +99,7 @@
 
 
 
-  <meta name="keywords" content="函数式接口,接口,Java8," />
+  <meta name="keywords" content="数据库,基础," />
 
 
 
@@ -112,18 +112,17 @@
 
 
 
-<meta name="description" content="Java 8 函数式接口函数接口概述函数式接口(Functional Interface)就是一个有且仅有一个抽象方法，但是可以有多个非抽象方法的接口。函数式接口可以被隐式转换为 lambda 表达式。Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上。">
+<meta name="description" content="SQL1.什么是SQL？     Structured Query Language：结构化查询语言     其实就是定义了操作所有关系型数据库的规则。每一种数据库操作的方式存在不一样的地方，称为“方言”。  2.SQL通用语法     1. SQL 语句可以单行或多行书写，以分号结尾。     2. 可使用空格和缩进来增强语句的可读性。     3. MySQL 数据库的 SQL 语句不区分大小">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 函数式接口">
-<meta property="og:url" content="https://lzyb.github.io/2017/04/07/Java-%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/index.html">
+<meta property="og:title" content="MySQL基础">
+<meta property="og:url" content="https://lzyb.github.io/2017/06/30/MySQL%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="李昊的站">
-<meta property="og:description" content="Java 8 函数式接口函数接口概述函数式接口(Functional Interface)就是一个有且仅有一个抽象方法，但是可以有多个非抽象方法的接口。函数式接口可以被隐式转换为 lambda 表达式。Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上。">
-<meta property="article:published_time" content="2017-04-07T08:52:19.000Z">
-<meta property="article:modified_time" content="2020-05-11T02:02:31.391Z">
+<meta property="og:description" content="SQL1.什么是SQL？     Structured Query Language：结构化查询语言     其实就是定义了操作所有关系型数据库的规则。每一种数据库操作的方式存在不一样的地方，称为“方言”。  2.SQL通用语法     1. SQL 语句可以单行或多行书写，以分号结尾。     2. 可使用空格和缩进来增强语句的可读性。     3. MySQL 数据库的 SQL 语句不区分大小">
+<meta property="article:published_time" content="2017-06-30T01:25:18.000Z">
+<meta property="article:modified_time" content="2020-06-30T01:47:40.325Z">
 <meta property="article:author" content="Li Hao">
-<meta property="article:tag" content="函数式接口">
-<meta property="article:tag" content="接口">
-<meta property="article:tag" content="Java8">
+<meta property="article:tag" content="数据库">
+<meta property="article:tag" content="基础">
 <meta name="twitter:card" content="summary">
 
 
@@ -154,13 +153,13 @@
 
 
 
-  <link rel="canonical" href="https://lzyb.github.io/2017/04/07/Java-函数式接口/"/>
+  <link rel="canonical" href="https://lzyb.github.io/2017/06/30/MySQL基础/"/>
 
 
 
 
 
-  <title>Java 函数式接口 | 李昊的站</title>
+  <title>MySQL基础 | 李昊的站</title>
   
 
 
@@ -341,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lzyb.github.io/2017/04/07/Java-%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/">
+    <link itemprop="mainEntityOfPage" href="https://lzyb.github.io/2017/06/30/MySQL%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Hao">
@@ -358,7 +357,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java 函数式接口</h2>
+          <h2 class="post-title" itemprop="name headline">MySQL基础</h2>
         
 
         <div class="post-meta">
@@ -370,8 +369,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-07T16:52:19+08:00">
-                2017-04-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-30T09:25:18+08:00">
+                2017-06-30
               </time>
             
 
@@ -393,8 +392,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
                   </a>
                 </span>
 
@@ -410,7 +409,7 @@
 
           
           
-             <span id="/2017/04/07/Java-%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/" class="leancloud_visitors" data-flag-title="Java 函数式接口">
+             <span id="/2017/06/30/MySQL%E5%9F%BA%E7%A1%80/" class="leancloud_visitors" data-flag-title="MySQL基础">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -441,23 +440,232 @@
       
 
       
-        <h2 id="Java-8-函数式接口"><a href="#Java-8-函数式接口" class="headerlink" title="Java 8 函数式接口"></a>Java 8 函数式接口</h2><h3 id="函数接口概述"><a href="#函数接口概述" class="headerlink" title="函数接口概述"></a>函数接口概述</h3><p>函数式接口(Functional Interface)就是一个有且仅有一个抽象方法，但是可以有多个非抽象方法的接口。<br>函数式接口可以被隐式转换为 lambda 表达式。<br>Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上。</p>
-<a id="more"></a>
-<h3 id="函数接口定义"><a href="#函数接口定义" class="headerlink" title="函数接口定义"></a>函数接口定义</h3><p>如定义了一个函数式接口如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">GreetingService</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">sayMessage</span><span class="params">(String message)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>那么就可以使用Lambda表达式来表示该接口的一个实现(注：JAVA 8 之前一般是用匿名类实现的)：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GreetingService greetService1 = message -&gt; System.out.println(<span class="string">"Hello "</span> + message);</span><br></pre></td></tr></table></figure>
-<h4 id="FunctionalInterface注解"><a href="#FunctionalInterface注解" class="headerlink" title="@FunctionalInterface注解"></a>@FunctionalInterface注解</h4><p>与@Override 注解的作用类似，Java 8中专门为函数式接口引入了一个新的注解： @FunctionalInterface 。该注解可用于一个接口的定义上，一旦使用该注解来定义接口，编译器将会强制检查该接口是否确实有且仅有一个抽象方法，否则将会报错。需要注意的是，即使不使用该注解，只要满足函数式接口的定义，这仍然是一个函数式接口，使用起来都一样。</p>
-<h4 id="lambda表达式"><a href="#lambda表达式" class="headerlink" title="lambda表达式"></a>lambda表达式</h4><p>(参数列表)-&gt;{代码}</p>
-<h3 id="常用函数式接口"><a href="#常用函数式接口" class="headerlink" title="常用函数式接口"></a>常用函数式接口</h3><h4 id="supplier生产数据函数式接口"><a href="#supplier生产数据函数式接口" class="headerlink" title="supplier生产数据函数式接口"></a>supplier生产数据函数式接口</h4><p>Supplier 接口翻译过来就是提供者，目的是生产数据，该接口对应的方法类型为不接受参数，但是提供一个返回值，通俗的理解为这种接口是无私的奉献者，不仅不要参数，还返回一个值，使用get()方法获得这个返回值。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Supplier&lt;String&gt; getInstance = () -&gt; <span class="string">"HelloWorld!"</span>;</span><br><span class="line">    System.out.println(getInstance.get());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="Consumer消费函数式接口"><a href="#Consumer消费函数式接口" class="headerlink" title="Consumer消费函数式接口"></a>Consumer消费函数式接口</h4><p>该接口对应的方法类型为接收一个参数，没有返回值，可以通俗的理解成将这个参数’消费掉了’，一般来说使用Consumer接口往往伴随着一些期望状态的改变或者事件的发生，例如最典型的forEach就是使用的Consumer接口，虽然没有任何的返回值，但是却向控制台输出了语句。<br>Consumer 使用accept对参数执行行为。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">accept(T t)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    StringBuilder sb = <span class="keyword">new</span> StringBuilder(<span class="string">"Hello "</span>);</span><br><span class="line">    Consumer&lt;StringBuilder&gt; consumer = (str) -&gt; str.append(<span class="string">"Jack!"</span>);</span><br><span class="line">    consumer.accept(sb);</span><br><span class="line">    System.out.println(sb.toString());	<span class="comment">// Hello Jack!</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">andThen(Consumer&lt;? <span class="keyword">super</span> T&gt; after)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Consumer&lt;StringBuilder&gt; consumer1 = (str) -&gt; str.append(<span class="string">" Bob!"</span>);</span><br><span class="line">    consumer.andThen(consumer1).accept(sb);</span><br><span class="line">    System.out.println(sb.toString());	<span class="comment">// Hello Jack! Bob</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><pre><code>1.什么是SQL？
+    Structured Query Language：结构化查询语言
+    其实就是定义了操作所有关系型数据库的规则。每一种数据库操作的方式存在不一样的地方，称为“方言”。
 
-<h4 id="Functio-lt-T-R-gt-类型转换函数式接口"><a href="#Functio-lt-T-R-gt-类型转换函数式接口" class="headerlink" title="Functio&lt;T,R&gt; 类型转换函数式接口"></a>Functio&lt;T,R&gt; 类型转换函数式接口</h4><p>T—函数的输入类型，R-函数的输出类型，也就是通过这个函数，可以将一个类型转换为另一个类型，比如下面的例子<br> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">apply(T t)</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Function&lt;String, String&gt; function = a -&gt; a + <span class="string">" Jack!"</span>;</span><br><span class="line">    System.out.println(function.apply(<span class="string">"Hello"</span>)); <span class="comment">// Hello Jack!</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> andThen(Function&lt;? <span class="keyword">super</span> R,? extends V&gt; after)</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Function&lt;String, String&gt; function = a -&gt; a + <span class="string">" Jack!"</span>;</span><br><span class="line">    Function&lt;String, String&gt; function1 = a -&gt; a + <span class="string">" Bob!"</span>;</span><br><span class="line">    String greet = function.andThen(function1).apply(<span class="string">"Hello"</span>);</span><br><span class="line">    System.out.println(greet); <span class="comment">// Hello Jack! Bob!</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="Predicate-断言函数式接口"><a href="#Predicate-断言函数式接口" class="headerlink" title="Predicate 断言函数式接口"></a>Predicate 断言函数式接口</h4><p>predicate&lt;T,Boolean&gt; 断言接口，顾名思义，中文中的‘是’与‘不是’是中文语法的谓语，同样的该接口对应的方法为接收一个参数，返回一个Boolean类型值，多用于判断与过滤，当然你可以把他理解成特殊的Funcation&lt;T,R&gt;，但是为了便于区分语义，还是单独的划了一个接口，使用test()方法执行这段行为</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">   </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">   Predicate&lt;Integer&gt; predicate = number -&gt; number != <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    test(T t) 等价于 ==</span><br><span class="line">    System.out.println(predicate.test(<span class="number">10</span>));    <span class="comment">//true</span></span><br><span class="line">    </span><br><span class="line">    and(Predicate&lt;? <span class="keyword">super</span> T&gt; other) 等价于 and</span><br><span class="line">    predicate = predicate.and(number -&gt; number &gt;= <span class="number">10</span>);</span><br><span class="line">    System.out.println(predicate.test(<span class="number">10</span>));    <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line">    or(Predicate&lt;? <span class="keyword">super</span> T&gt; other) 等价于 or</span><br><span class="line">    predicate = predicate.or(number -&gt; number != <span class="number">10</span>);</span><br><span class="line">    System.out.println(predicate.test(<span class="number">10</span>));    <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line">    negate() 等价于 !=</span><br><span class="line">    predicate = predicate.negate();</span><br><span class="line">    System.out.println(predicate.test(<span class="number">10</span>));    <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+2.SQL通用语法
+    1. SQL 语句可以单行或多行书写，以分号结尾。
+    2. 可使用空格和缩进来增强语句的可读性。
+    3. MySQL 数据库的 SQL 语句不区分大小写，关键字建议使用大写。
+    4. 3 种注释
+        * 单行注释: -- 注释内容 或 # 注释内容(mysql 特有) 
+        * 多行注释: /* 注释 */
 
+3. SQL分类
+    1) DDL(Data Definition Language)数据定义语言
+        用来定义数据库对象：数据库，表，列等。关键字：create, drop,alter 等
+    2) DML(Data Manipulation Language)数据操作语言
+        用来对数据库中表的数据进行增删改。关键字：insert, delete, update 等
+    3) DQL(Data Query Language)数据查询语言
+        用来查询数据库中表的记录(数据)。关键字：select, where 等
+    4) DCL(Data Control Language)数据控制语言(了解)
+        用来定义数据库的访问权限和安全级别，及创建用户。关键字：GRANT， REVOKE 等</code></pre><a id="more"></a>
+<h2 id="DDL-操作数据库、表"><a href="#DDL-操作数据库、表" class="headerlink" title="DDL:操作数据库、表"></a>DDL:操作数据库、表</h2><pre><code>1. 操作数据库：CRUD
+    1. C(Create):创建
+        * 创建数据库：
+            * create database 数据库名称;
+        * 创建数据库，判断不存在，再创建：
+            * create database if not exists 数据库名称;
+        * 创建数据库，并指定字符集
+            * create database 数据库名称 character set 字符集名;
+
+        * 练习： 创建db4数据库，判断是否存在，并制定字符集为gbk
+            * create database if not exists db4 character set gbk;
+    2. R(Retrieve)：查询
+        * 查询所有数据库的名称:
+            * show databases;
+        * 查询某个数据库的字符集:查询某个数据库的创建语句
+            * show create database 数据库名称;
+    3. U(Update):修改
+        * 修改数据库的字符集
+            * alter database 数据库名称 character set 字符集名称;
+    4. D(Delete):删除
+        * 删除数据库
+            * drop database 数据库名称;
+        * 判断数据库存在，存在再删除
+            * drop database if exists 数据库名称;
+    5. 使用数据库
+        * 查询当前正在使用的数据库名称
+            * select database();
+        * 使用数据库
+            * use 数据库名称;
+
+
+2. 操作表
+    1. C(Create):创建
+        1. 语法：
+            create table 表名(
+                列名1 数据类型1,
+                列名2 数据类型2,
+                ....
+                列名n 数据类型n
+            );
+            * 注意：最后一列，不需要加逗号（,）
+            * 数据库类型：
+                1. int：整数类型
+                    * age int,
+                2. double:小数类型
+                    * score double(5,2)
+                3. date:日期，只包含年月日，yyyy-MM-dd
+                4. datetime:日期，包含年月日时分秒     yyyy-MM-dd HH:mm:ss
+                5. timestamp:时间错类型    包含年月日时分秒     yyyy-MM-dd HH:mm:ss    
+                    * 如果将来不给这个字段赋值，或赋值为null，则默认使用当前的系统时间，来自动赋值
+
+                6. varchar：字符串
+                    * name varchar(20):姓名最大20个字符
+                    * zhangsan 8个字符  张三 2个字符
+
+
+        * 创建表
+            create table student(
+                id int,
+                name varchar(32),
+                age int ,
+                score double(4,1),
+                birthday date,
+                insert_time timestamp
+            );
+        * 复制表：
+            * create table 表名 like 被复制的表名;          
+    2. R(Retrieve)：查询
+        * 查询某个数据库中所有的表名称
+            * show tables;
+        * 查询表结构
+            * desc 表名;
+    3. U(Update):修改
+        1. 修改表名
+            alter table 表名 rename to 新的表名;
+        2. 修改表的字符集
+            alter table 表名 character set 字符集名称;
+        3. 添加一列
+            alter table 表名 add 列名 数据类型;
+        4. 修改列名称 类型
+            alter table 表名 change 列名 新列别 新数据类型;
+            alter table 表名 modify 列名 新数据类型;
+        5. 删除列
+            alter table 表名 drop 列名;
+    4. D(Delete):删除
+        * drop table 表名;
+        * drop table  if exists 表名 ;</code></pre><ul>
+<li>客户端图形化工具：SQLYog</li>
+</ul>
+<h2 id="DML：增删改表中数据"><a href="#DML：增删改表中数据" class="headerlink" title="DML：增删改表中数据"></a>DML：增删改表中数据</h2><pre><code>1. 添加数据：
+    * 语法：
+        * insert into 表名(列名1,列名2,...列名n) values(值1,值2,...值n);
+    * 注意：
+        1. 列名和值要一一对应。
+        2. 如果表名后，不定义列名，则默认给所有列添加值
+            insert into 表名 values(值1,值2,...值n);
+        3. 除了数字类型，其他类型需要使用引号(单双都可以)引起来
+2. 删除数据：
+    * 语法：
+        * delete from 表名 [where 条件]
+    * 注意：
+        1. 如果不加条件，则删除表中所有记录。
+        2. 如果要删除所有记录
+            1. delete from 表名; -- 不推荐使用。有多少条记录就会执行多少次删除操作
+            2. TRUNCATE TABLE 表名; -- 推荐使用，效率更高 先删除表，然后再创建一张一样的表。
+3. 修改数据：
+    * 语法：
+        * update 表名 set 列名1 = 值1, 列名2 = 值2,... [where 条件];
+
+    * 注意：
+        1. 如果不加任何条件，则会将表中所有记录全部修改。</code></pre><h2 id="DQL：查询表中的记录"><a href="#DQL：查询表中的记录" class="headerlink" title="DQL：查询表中的记录"></a>DQL：查询表中的记录</h2><pre><code>* select * from 表名;
+
+1. 语法：
+    select
+        字段列表
+    from
+        表名列表
+    where
+        条件列表
+    group by
+        分组字段
+    having
+        分组之后的条件
+    order by
+        排序
+    limit
+        分页限定
+
+
+2. 基础查询
+    1. 多个字段的查询
+        select 字段名1，字段名2... from 表名；
+        * 注意：
+            * 如果查询所有字段，则可以使用*来替代字段列表。
+    2. 去除重复：
+        * distinct
+    3. 计算列
+        * 一般可以使用四则运算计算一些列的值。（一般只会进行数值型的计算）
+        * ifnull(表达式1,表达式2)：null参与的运算，计算结果都为null
+            * 表达式1：哪个字段需要判断是否为null
+            * 如果该字段为null后的替换值。
+    4. 起别名：
+        * as：as也可以省略
+
+
+3. 条件查询
+    1. where子句后跟条件
+    2. 运算符
+        * &gt; 、&lt; 、&lt;= 、&gt;= 、= 、&lt;&gt;
+        * BETWEEN...AND  
+        * IN( 集合) 
+        * LIKE：模糊查询
+            * 占位符：
+                * _:单个任意字符
+                * %：多个任意字符
+        * IS NULL  
+        * and  或 &amp;&amp;
+        * or  或 || 
+        * not  或 !
+
+            -- 查询年龄大于20岁
+
+            SELECT * FROM student WHERE age &gt; 20;
+
+            SELECT * FROM student WHERE age &gt;= 20;
+
+            -- 查询年龄等于20岁
+            SELECT * FROM student WHERE age = 20;
+
+            -- 查询年龄不等于20岁
+            SELECT * FROM student WHERE age != 20;
+            SELECT * FROM student WHERE age &lt;&gt; 20;
+
+            -- 查询年龄大于等于20 小于等于30
+
+            SELECT * FROM student WHERE age &gt;= 20 &amp;&amp;  age &lt;=30;
+            SELECT * FROM student WHERE age &gt;= 20 AND  age &lt;=30;
+            SELECT * FROM student WHERE age BETWEEN 20 AND 30;
+
+            -- 查询年龄22岁，18岁，25岁的信息
+            SELECT * FROM student WHERE age = 22 OR age = 18 OR age = 25
+            SELECT * FROM student WHERE age IN (22,18,25);
+
+            -- 查询英语成绩为null
+            SELECT * FROM student WHERE english = NULL; -- 不对的。null值不能使用 = （!=） 判断
+
+            SELECT * FROM student WHERE english IS NULL;
+
+            -- 查询英语成绩不为null
+            SELECT * FROM student WHERE english  IS NOT NULL;
+
+
+
+            -- 查询姓马的有哪些？ like
+            SELECT * FROM student WHERE NAME LIKE &apos;马%&apos;;
+            -- 查询姓名第二个字是化的人
+
+            SELECT * FROM student WHERE NAME LIKE &quot;_化%&quot;;
+
+            -- 查询姓名是3个字的人
+            SELECT * FROM student WHERE NAME LIKE &apos;___&apos;;
+
+
+            -- 查询姓名中包含德的人
+            SELECT * FROM student WHERE NAME LIKE &apos;%德%&apos;;</code></pre>
       
     </div>
     
@@ -474,11 +682,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/" rel="tag"># 函数式接口</a>
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag"># 数据库</a>
           
-            <a href="/tags/%E6%8E%A5%E5%8F%A3/" rel="tag"># 接口</a>
-          
-            <a href="/tags/Java8/" rel="tag"># Java8</a>
+            <a href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag"># 基础</a>
           
         </div>
       
@@ -491,8 +697,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/21/Java-%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88/" rel="next" title="Java 双列集合">
-                <i class="fa fa-chevron-left"></i> Java 双列集合
+              <a href="/2017/05/22/when-done-then-%E7%9A%84%E7%94%A8%E6%B3%95/" rel="next" title="$.when().done().then()的用法">
+                <i class="fa fa-chevron-left"></i> $.when().done().then()的用法
               </a>
             
           </div>
@@ -501,8 +707,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/11/Java8-Stream%E6%B5%81/" rel="prev" title="Java8 Stream流">
-                Java8 Stream流 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/26/2020/04/26%E9%9A%8F%E7%AC%94/" rel="prev" title="吟诗一首">
+                吟诗一首 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -676,7 +882,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-8-函数式接口"><span class="nav-number">1.</span> <span class="nav-text">Java 8 函数式接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数接口概述"><span class="nav-number">1.1.</span> <span class="nav-text">函数接口概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数接口定义"><span class="nav-number">1.2.</span> <span class="nav-text">函数接口定义</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#FunctionalInterface注解"><span class="nav-number">1.2.1.</span> <span class="nav-text">@FunctionalInterface注解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lambda表达式"><span class="nav-number">1.2.2.</span> <span class="nav-text">lambda表达式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用函数式接口"><span class="nav-number">1.3.</span> <span class="nav-text">常用函数式接口</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#supplier生产数据函数式接口"><span class="nav-number">1.3.1.</span> <span class="nav-text">supplier生产数据函数式接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Consumer消费函数式接口"><span class="nav-number">1.3.2.</span> <span class="nav-text">Consumer消费函数式接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Functio-lt-T-R-gt-类型转换函数式接口"><span class="nav-number">1.3.3.</span> <span class="nav-text">Functio&lt;T,R&gt; 类型转换函数式接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Predicate-断言函数式接口"><span class="nav-number">1.3.4.</span> <span class="nav-text">Predicate 断言函数式接口</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL"><span class="nav-number">1.</span> <span class="nav-text">SQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DDL-操作数据库、表"><span class="nav-number">2.</span> <span class="nav-text">DDL:操作数据库、表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DML：增删改表中数据"><span class="nav-number">3.</span> <span class="nav-text">DML：增删改表中数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DQL：查询表中的记录"><span class="nav-number">4.</span> <span class="nav-text">DQL：查询表中的记录</span></a></li></ol></div>
             
 
           </div>

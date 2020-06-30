@@ -36,6 +36,281 @@
       </tags>
   </entry>
   <entry>
+    <title>Git常用命令</title>
+    <url>/2017/05/13/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h3 id="常用Git命令"><a href="#常用Git命令" class="headerlink" title="常用Git命令"></a>常用Git命令</h3><p><code>git init</code> [project-name] 初始化 在工作路径上创建主分支<br><code>git config [--global] user.name &quot;[name]&quot;</code> 设置提交代码时的用户信息<br><code>git config [--global] user.email &quot;[email address]&quot;</code>设置提交代码时的用户信息<br><code>git clone</code> [地址]  克隆远程仓库<br><code>git clone -b</code> [分支名] [地址] 克隆分支的代码到本地<br><code>git add -A</code> 保存所有的修改<br><code>git add .</code> 保存新的添加和修改，但是不包括删除<br><code>git add -u</code> 保存修改和删除，但是不包括新建文件。<br>所以默认使用git add -A就行<br><code>git commit –m</code> “本次提交描述” commit可以一次提交缓冲区的所有文件，相当于一个版本。<br><code>git pull origin</code> [分支名] 从指定分支获取最新迭代<br><code>git push origin</code> [分支名] 推送当前迭代到制动分支</p>
+<a id="more"></a>
+
+<p><code>git status</code>  查看状态<br><code>git push -- force</code> 强制推送</p>
+<h3 id="分支命令"><a href="#分支命令" class="headerlink" title="分支命令"></a>分支命令</h3><p><code>git branch</code> 查看当前分支<br><code>git branch</code> [分支名] 新建分支<br><code>git checkout</code> [分支名] 切换分支<br><code>git checkout -b</code> [分支名]  创建并切换分支<br><code>git branch -v</code>  查看分支以及提交hash值和commit信息<br><code>git merge</code> [分支名] 把该分支的内容合并到现有分支上<br><code>git branch -d</code> [分支名]  删除分支<br><code>git branch -D</code> [分支名]  强制删除 若没有其他分支合并就删除 d会提示 D不会<br><code>git branch -m</code> [旧分支名] [新分支名]  修改分支名<br><code>git branch -M</code> [旧分支名] [新分支名]  修改分支名 M强制修改 若与其他分支有冲突也会创建(慎用)<br><code>git branch -r</code> // 列出远程分支(远程所有分支名)<br><code>git branch -a</code> // 查看远程分支(列出远程分支以及本地分支名)<br><code>git fetch</code> 更新remote索引<br><code>git push -u origin</code> [分支名]  将本地分支推送到origin主机，同时指定origin为默认主机</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>常用命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL基础</title>
+    <url>/2017/06/30/MySQL%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><pre><code>1.什么是SQL？
+    Structured Query Language：结构化查询语言
+    其实就是定义了操作所有关系型数据库的规则。每一种数据库操作的方式存在不一样的地方，称为“方言”。
+
+2.SQL通用语法
+    1. SQL 语句可以单行或多行书写，以分号结尾。
+    2. 可使用空格和缩进来增强语句的可读性。
+    3. MySQL 数据库的 SQL 语句不区分大小写，关键字建议使用大写。
+    4. 3 种注释
+        * 单行注释: -- 注释内容 或 # 注释内容(mysql 特有) 
+        * 多行注释: /* 注释 */
+
+3. SQL分类
+    1) DDL(Data Definition Language)数据定义语言
+        用来定义数据库对象：数据库，表，列等。关键字：create, drop,alter 等
+    2) DML(Data Manipulation Language)数据操作语言
+        用来对数据库中表的数据进行增删改。关键字：insert, delete, update 等
+    3) DQL(Data Query Language)数据查询语言
+        用来查询数据库中表的记录(数据)。关键字：select, where 等
+    4) DCL(Data Control Language)数据控制语言(了解)
+        用来定义数据库的访问权限和安全级别，及创建用户。关键字：GRANT， REVOKE 等</code></pre><a id="more"></a>
+<h2 id="DDL-操作数据库、表"><a href="#DDL-操作数据库、表" class="headerlink" title="DDL:操作数据库、表"></a>DDL:操作数据库、表</h2><pre><code>1. 操作数据库：CRUD
+    1. C(Create):创建
+        * 创建数据库：
+            * create database 数据库名称;
+        * 创建数据库，判断不存在，再创建：
+            * create database if not exists 数据库名称;
+        * 创建数据库，并指定字符集
+            * create database 数据库名称 character set 字符集名;
+
+        * 练习： 创建db4数据库，判断是否存在，并制定字符集为gbk
+            * create database if not exists db4 character set gbk;
+    2. R(Retrieve)：查询
+        * 查询所有数据库的名称:
+            * show databases;
+        * 查询某个数据库的字符集:查询某个数据库的创建语句
+            * show create database 数据库名称;
+    3. U(Update):修改
+        * 修改数据库的字符集
+            * alter database 数据库名称 character set 字符集名称;
+    4. D(Delete):删除
+        * 删除数据库
+            * drop database 数据库名称;
+        * 判断数据库存在，存在再删除
+            * drop database if exists 数据库名称;
+    5. 使用数据库
+        * 查询当前正在使用的数据库名称
+            * select database();
+        * 使用数据库
+            * use 数据库名称;
+
+
+2. 操作表
+    1. C(Create):创建
+        1. 语法：
+            create table 表名(
+                列名1 数据类型1,
+                列名2 数据类型2,
+                ....
+                列名n 数据类型n
+            );
+            * 注意：最后一列，不需要加逗号（,）
+            * 数据库类型：
+                1. int：整数类型
+                    * age int,
+                2. double:小数类型
+                    * score double(5,2)
+                3. date:日期，只包含年月日，yyyy-MM-dd
+                4. datetime:日期，包含年月日时分秒     yyyy-MM-dd HH:mm:ss
+                5. timestamp:时间错类型    包含年月日时分秒     yyyy-MM-dd HH:mm:ss    
+                    * 如果将来不给这个字段赋值，或赋值为null，则默认使用当前的系统时间，来自动赋值
+
+                6. varchar：字符串
+                    * name varchar(20):姓名最大20个字符
+                    * zhangsan 8个字符  张三 2个字符
+
+
+        * 创建表
+            create table student(
+                id int,
+                name varchar(32),
+                age int ,
+                score double(4,1),
+                birthday date,
+                insert_time timestamp
+            );
+        * 复制表：
+            * create table 表名 like 被复制的表名;          
+    2. R(Retrieve)：查询
+        * 查询某个数据库中所有的表名称
+            * show tables;
+        * 查询表结构
+            * desc 表名;
+    3. U(Update):修改
+        1. 修改表名
+            alter table 表名 rename to 新的表名;
+        2. 修改表的字符集
+            alter table 表名 character set 字符集名称;
+        3. 添加一列
+            alter table 表名 add 列名 数据类型;
+        4. 修改列名称 类型
+            alter table 表名 change 列名 新列别 新数据类型;
+            alter table 表名 modify 列名 新数据类型;
+        5. 删除列
+            alter table 表名 drop 列名;
+    4. D(Delete):删除
+        * drop table 表名;
+        * drop table  if exists 表名 ;</code></pre><ul>
+<li>客户端图形化工具：SQLYog</li>
+</ul>
+<h2 id="DML：增删改表中数据"><a href="#DML：增删改表中数据" class="headerlink" title="DML：增删改表中数据"></a>DML：增删改表中数据</h2><pre><code>1. 添加数据：
+    * 语法：
+        * insert into 表名(列名1,列名2,...列名n) values(值1,值2,...值n);
+    * 注意：
+        1. 列名和值要一一对应。
+        2. 如果表名后，不定义列名，则默认给所有列添加值
+            insert into 表名 values(值1,值2,...值n);
+        3. 除了数字类型，其他类型需要使用引号(单双都可以)引起来
+2. 删除数据：
+    * 语法：
+        * delete from 表名 [where 条件]
+    * 注意：
+        1. 如果不加条件，则删除表中所有记录。
+        2. 如果要删除所有记录
+            1. delete from 表名; -- 不推荐使用。有多少条记录就会执行多少次删除操作
+            2. TRUNCATE TABLE 表名; -- 推荐使用，效率更高 先删除表，然后再创建一张一样的表。
+3. 修改数据：
+    * 语法：
+        * update 表名 set 列名1 = 值1, 列名2 = 值2,... [where 条件];
+
+    * 注意：
+        1. 如果不加任何条件，则会将表中所有记录全部修改。</code></pre><h2 id="DQL：查询表中的记录"><a href="#DQL：查询表中的记录" class="headerlink" title="DQL：查询表中的记录"></a>DQL：查询表中的记录</h2><pre><code>* select * from 表名;
+
+1. 语法：
+    select
+        字段列表
+    from
+        表名列表
+    where
+        条件列表
+    group by
+        分组字段
+    having
+        分组之后的条件
+    order by
+        排序
+    limit
+        分页限定
+
+
+2. 基础查询
+    1. 多个字段的查询
+        select 字段名1，字段名2... from 表名；
+        * 注意：
+            * 如果查询所有字段，则可以使用*来替代字段列表。
+    2. 去除重复：
+        * distinct
+    3. 计算列
+        * 一般可以使用四则运算计算一些列的值。（一般只会进行数值型的计算）
+        * ifnull(表达式1,表达式2)：null参与的运算，计算结果都为null
+            * 表达式1：哪个字段需要判断是否为null
+            * 如果该字段为null后的替换值。
+    4. 起别名：
+        * as：as也可以省略
+
+
+3. 条件查询
+    1. where子句后跟条件
+    2. 运算符
+        * &gt; 、&lt; 、&lt;= 、&gt;= 、= 、&lt;&gt;
+        * BETWEEN...AND  
+        * IN( 集合) 
+        * LIKE：模糊查询
+            * 占位符：
+                * _:单个任意字符
+                * %：多个任意字符
+        * IS NULL  
+        * and  或 &amp;&amp;
+        * or  或 || 
+        * not  或 !
+
+            -- 查询年龄大于20岁
+
+            SELECT * FROM student WHERE age &gt; 20;
+
+            SELECT * FROM student WHERE age &gt;= 20;
+
+            -- 查询年龄等于20岁
+            SELECT * FROM student WHERE age = 20;
+
+            -- 查询年龄不等于20岁
+            SELECT * FROM student WHERE age != 20;
+            SELECT * FROM student WHERE age &lt;&gt; 20;
+
+            -- 查询年龄大于等于20 小于等于30
+
+            SELECT * FROM student WHERE age &gt;= 20 &amp;&amp;  age &lt;=30;
+            SELECT * FROM student WHERE age &gt;= 20 AND  age &lt;=30;
+            SELECT * FROM student WHERE age BETWEEN 20 AND 30;
+
+            -- 查询年龄22岁，18岁，25岁的信息
+            SELECT * FROM student WHERE age = 22 OR age = 18 OR age = 25
+            SELECT * FROM student WHERE age IN (22,18,25);
+
+            -- 查询英语成绩为null
+            SELECT * FROM student WHERE english = NULL; -- 不对的。null值不能使用 = （!=） 判断
+
+            SELECT * FROM student WHERE english IS NULL;
+
+            -- 查询英语成绩不为null
+            SELECT * FROM student WHERE english  IS NOT NULL;
+
+
+
+            -- 查询姓马的有哪些？ like
+            SELECT * FROM student WHERE NAME LIKE &apos;马%&apos;;
+            -- 查询姓名第二个字是化的人
+
+            SELECT * FROM student WHERE NAME LIKE &quot;_化%&quot;;
+
+            -- 查询姓名是3个字的人
+            SELECT * FROM student WHERE NAME LIKE &apos;___&apos;;
+
+
+            -- 查询姓名中包含德的人
+            SELECT * FROM student WHERE NAME LIKE &apos;%德%&apos;;</code></pre>]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 双列集合</title>
+    <url>/2017/03/21/Java-%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88/</url>
+    <content><![CDATA[<h3 id="Map接口概述"><a href="#Map接口概述" class="headerlink" title="Map接口概述"></a>Map接口概述</h3><p>Map是双列集合的顶层接口，Map接口下是一个键值对（key-value）的映射接口，Map集合中，不能包含重复的键，每个键只能映射一个值（元素），值可以重复，因此可以根据key快速查找value的值。</p>
+<a id="more"></a>
+
+<h3 id="Map接口常用的方法"><a href="#Map接口常用的方法" class="headerlink" title="Map接口常用的方法"></a>Map接口常用的方法</h3><p>1、<code>void clear()</code>  从该地图中删除所有的映射（可选操作）。<br>2、<code>boolean containsKey(Object key)</code> 如果此映射包含指定键的映射，则返回 true 。<br>3、<code>boolean containsValue(Object value)</code> 如果此地图将一个或多个键映射到指定的值，则返回 true 。<br>4、<code>Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()</code> 返回此地图中包含的映射的Set视图。<br>5、<code>Set&lt;K&gt; keySet()</code>返回此地图中包含的键的Set视图。<br>6、<code>V     put(K key, V value)</code> 将指定的值与该映射中的指定键相关联（可选操作）。<br>7、<code>V    remove(Object key)</code> 如果存在（从可选的操作），从该地图中删除一个键的映射。<br>8、<code>int  size()</code> 返回此地图中键值映射的数量。</p>
+<h3 id="常用实现类"><a href="#常用实现类" class="headerlink" title="常用实现类"></a>常用实现类</h3><h4 id="Class-HashMap-lt-K-V-gt"><a href="#Class-HashMap-lt-K-V-gt" class="headerlink" title="Class HashMap&lt;K,V&gt;"></a>Class HashMap&lt;K,V&gt;</h4><p>基于哈希表的实现的Map接口。 此实现提供了所有可选的地图操作，并允许null的值和null键。 （ HashMap类大致相当于Hashtable ，除了它是不同步的，并允许null）。这个类不能保证地图的顺序; 特别是，它不能保证订单在一段时间内保持不变。<br>HashMap非线程安全，即任一时刻可以有多个线程同时写HashMap，可能会导致数据的不一致。如果需要满足线程安全，可以用 Collections的synchronizedMap方法使HashMap具有线程安的能力，或者使用ConcurrentHashMap。<br>HashMap在JDK1.8之前的实现方式 数组+链表,但是在JDK1.8后对HashMap进行了底层优化,改为了由 数组+链表+红黑树实现,主要的目的是提高查找效率。</p>
+<h4 id="Class-LinkedHashMap-lt-K-V-gt"><a href="#Class-LinkedHashMap-lt-K-V-gt" class="headerlink" title="Class LinkedHashMap&lt;K,V&gt;"></a>Class LinkedHashMap&lt;K,V&gt;</h4><p>LinkedHashMap继承于HashMap，哈希表和链表实现的Map接口，具有可预测的迭代次序。 这种实现不同于HashMap，它维持于所有条目的运行双向链表。 此链接列表定义迭代排序，通常是将键插入到地图（插入顺序 ）中的顺序 。 请注意，如果将键重新插入到地图中，则插入顺序不受影响。 （A键k被重新插入到地图m如果当m.containsKey(k)将返回true之前立即调用m.put(k, v)被调用。）</p>
+<h4 id="Class-Hashtable-lt-K-V-gt"><a href="#Class-Hashtable-lt-K-V-gt" class="headerlink" title="Class Hashtable&lt;K,V&gt;"></a>Class Hashtable&lt;K,V&gt;</h4><p>该类实现了一个哈希表，它将键映射到值。 任何非null对象都可以用作键值或值。<br>为了从散列表成功存储和检索对象，用作键的对象必须实现hashCode方法和equals方法。<br>Hashtable是遗留类，很多映射的常用功能与HashMap类似，不同的是它承自Dictionary类，并且是线程安全的，任一时间只有一个线程能写Hashtable，并发性不如ConcurrentHashMap，因为ConcurrentHashMap引入了分段锁。Hashtable不建议在新代码中使用，不需要线程安全的场合可以用HashMap替换，需要线程安全的场合可以用ConcurrentHashMap替换。</p>
+<h4 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h4><p>一个红黑树基于NavigableMap实现。 该地图是根据排序natural ordering其密钥，或通过Comparator在地图创建时提供，这取决于所使用的构造方法。<br>TreeMap实现SortedMap接口，能够把它保存的记录根据键排序，默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator遍历TreeMap时，得到的记录是排过序的。如果使用排序的映射，建议使用TreeMap。在使用TreeMap时，key必须实现Comparable接口或者在构造TreeMap传入自定义的Comparator，否则会在运行时抛出java.lang.ClassCastException类型的异常。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>集合</tag>
+        <tag>双列集合</tag>
+        <tag>Map</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java 函数式接口</title>
     <url>/2017/04/07/Java-%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3/</url>
     <content><![CDATA[<h2 id="Java-8-函数式接口"><a href="#Java-8-函数式接口" class="headerlink" title="Java 8 函数式接口"></a>Java 8 函数式接口</h2><h3 id="函数接口概述"><a href="#函数接口概述" class="headerlink" title="函数接口概述"></a>函数接口概述</h3><p>函数式接口(Functional Interface)就是一个有且仅有一个抽象方法，但是可以有多个非抽象方法的接口。<br>函数式接口可以被隐式转换为 lambda 表达式。<br>Lambda 表达式和方法引用（实际上也可认为是Lambda表达式）上。</p>
@@ -62,44 +337,6 @@
         <tag>函数式接口</tag>
         <tag>接口</tag>
         <tag>Java8</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java 双列集合</title>
-    <url>/2017/03/21/Java-%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88/</url>
-    <content><![CDATA[<h3 id="Map接口概述"><a href="#Map接口概述" class="headerlink" title="Map接口概述"></a>Map接口概述</h3><p>Map是双列集合的顶层接口，Map接口下是一个键值对（key-value）的映射接口，Map集合中，不能包含重复的键，每个键只能映射一个值（元素），值可以重复，因此可以根据key快速查找value的值。</p>
-<a id="more"></a>
-
-<h3 id="Map接口常用的方法"><a href="#Map接口常用的方法" class="headerlink" title="Map接口常用的方法"></a>Map接口常用的方法</h3><p>1、<code>void clear()</code>  从该地图中删除所有的映射（可选操作）。<br>2、<code>boolean containsKey(Object key)</code> 如果此映射包含指定键的映射，则返回 true 。<br>3、<code>boolean containsValue(Object value)</code> 如果此地图将一个或多个键映射到指定的值，则返回 true 。<br>4、<code>Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()</code> 返回此地图中包含的映射的Set视图。<br>5、<code>Set&lt;K&gt; keySet()</code>返回此地图中包含的键的Set视图。<br>6、<code>V     put(K key, V value)</code> 将指定的值与该映射中的指定键相关联（可选操作）。<br>7、<code>V    remove(Object key)</code> 如果存在（从可选的操作），从该地图中删除一个键的映射。<br>8、<code>int  size()</code> 返回此地图中键值映射的数量。</p>
-<h3 id="常用实现类"><a href="#常用实现类" class="headerlink" title="常用实现类"></a>常用实现类</h3><h4 id="Class-HashMap-lt-K-V-gt"><a href="#Class-HashMap-lt-K-V-gt" class="headerlink" title="Class HashMap&lt;K,V&gt;"></a>Class HashMap&lt;K,V&gt;</h4><p>基于哈希表的实现的Map接口。 此实现提供了所有可选的地图操作，并允许null的值和null键。 （ HashMap类大致相当于Hashtable ，除了它是不同步的，并允许null）。这个类不能保证地图的顺序; 特别是，它不能保证订单在一段时间内保持不变。<br>HashMap非线程安全，即任一时刻可以有多个线程同时写HashMap，可能会导致数据的不一致。如果需要满足线程安全，可以用 Collections的synchronizedMap方法使HashMap具有线程安的能力，或者使用ConcurrentHashMap。<br>HashMap在JDK1.8之前的实现方式 数组+链表,但是在JDK1.8后对HashMap进行了底层优化,改为了由 数组+链表+红黑树实现,主要的目的是提高查找效率。</p>
-<h4 id="Class-LinkedHashMap-lt-K-V-gt"><a href="#Class-LinkedHashMap-lt-K-V-gt" class="headerlink" title="Class LinkedHashMap&lt;K,V&gt;"></a>Class LinkedHashMap&lt;K,V&gt;</h4><p>LinkedHashMap继承于HashMap，哈希表和链表实现的Map接口，具有可预测的迭代次序。 这种实现不同于HashMap，它维持于所有条目的运行双向链表。 此链接列表定义迭代排序，通常是将键插入到地图（插入顺序 ）中的顺序 。 请注意，如果将键重新插入到地图中，则插入顺序不受影响。 （A键k被重新插入到地图m如果当m.containsKey(k)将返回true之前立即调用m.put(k, v)被调用。）</p>
-<h4 id="Class-Hashtable-lt-K-V-gt"><a href="#Class-Hashtable-lt-K-V-gt" class="headerlink" title="Class Hashtable&lt;K,V&gt;"></a>Class Hashtable&lt;K,V&gt;</h4><p>该类实现了一个哈希表，它将键映射到值。 任何非null对象都可以用作键值或值。<br>为了从散列表成功存储和检索对象，用作键的对象必须实现hashCode方法和equals方法。<br>Hashtable是遗留类，很多映射的常用功能与HashMap类似，不同的是它承自Dictionary类，并且是线程安全的，任一时间只有一个线程能写Hashtable，并发性不如ConcurrentHashMap，因为ConcurrentHashMap引入了分段锁。Hashtable不建议在新代码中使用，不需要线程安全的场合可以用HashMap替换，需要线程安全的场合可以用ConcurrentHashMap替换。</p>
-<h4 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h4><p>一个红黑树基于NavigableMap实现。 该地图是根据排序natural ordering其密钥，或通过Comparator在地图创建时提供，这取决于所使用的构造方法。<br>TreeMap实现SortedMap接口，能够把它保存的记录根据键排序，默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator遍历TreeMap时，得到的记录是排过序的。如果使用排序的映射，建议使用TreeMap。在使用TreeMap时，key必须实现Comparable接口或者在构造TreeMap传入自定义的Comparator，否则会在运行时抛出java.lang.ClassCastException类型的异常。</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>集合</tag>
-        <tag>双列集合</tag>
-        <tag>Map</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git常用命令</title>
-    <url>/2017/05/13/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h3 id="常用Git命令"><a href="#常用Git命令" class="headerlink" title="常用Git命令"></a>常用Git命令</h3><p><code>git init</code> [project-name] 初始化 在工作路径上创建主分支<br><code>git config [--global] user.name &quot;[name]&quot;</code> 设置提交代码时的用户信息<br><code>git config [--global] user.email &quot;[email address]&quot;</code>设置提交代码时的用户信息<br><code>git clone</code> [地址]  克隆远程仓库<br><code>git clone -b</code> [分支名] [地址] 克隆分支的代码到本地<br><code>git add -A</code> 保存所有的修改<br><code>git add .</code> 保存新的添加和修改，但是不包括删除<br><code>git add -u</code> 保存修改和删除，但是不包括新建文件。<br>所以默认使用git add -A就行<br><code>git commit –m</code> “本次提交描述” commit可以一次提交缓冲区的所有文件，相当于一个版本。<br><code>git pull origin</code> [分支名] 从指定分支获取最新迭代<br><code>git push origin</code> [分支名] 推送当前迭代到制动分支</p>
-<a id="more"></a>
-
-<p><code>git status</code>  查看状态<br><code>git push -- force</code> 强制推送</p>
-<h3 id="分支命令"><a href="#分支命令" class="headerlink" title="分支命令"></a>分支命令</h3><p><code>git branch</code> 查看当前分支<br><code>git branch</code> [分支名] 新建分支<br><code>git checkout</code> [分支名] 切换分支<br><code>git checkout -b</code> [分支名]  创建并切换分支<br><code>git branch -v</code>  查看分支以及提交hash值和commit信息<br><code>git merge</code> [分支名] 把该分支的内容合并到现有分支上<br><code>git branch -d</code> [分支名]  删除分支<br><code>git branch -D</code> [分支名]  强制删除 若没有其他分支合并就删除 d会提示 D不会<br><code>git branch -m</code> [旧分支名] [新分支名]  修改分支名<br><code>git branch -M</code> [旧分支名] [新分支名]  修改分支名 M强制修改 若与其他分支有冲突也会创建(慎用)<br><code>git branch -r</code> // 列出远程分支(远程所有分支名)<br><code>git branch -a</code> // 查看远程分支(列出远程分支以及本地分支名)<br><code>git fetch</code> 更新remote索引<br><code>git push -u origin</code> [分支名]  将本地分支推送到origin主机，同时指定origin为默认主机</p>
-]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>常用命令</tag>
       </tags>
   </entry>
   <entry>
