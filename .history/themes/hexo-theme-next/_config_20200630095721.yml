@@ -340,8 +340,8 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family: Roboto Mono
-    size: 16
+    family:
+    size:
 
 
 # ---------------------------------------------------------------
